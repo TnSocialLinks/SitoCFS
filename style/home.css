@@ -1,0 +1,23 @@
+#container {
+    width: 1440px;
+    height: 3729px;
+    position: relative;
+    background: white"
+}
+
+.navbar{
+    background-color: #1A405A;
+}
+
+#Cooperative {
+    width: 256px;
+    height: 24px;
+    left: 339px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: PeroW01-SemiBold;
+    font-weight: 600;
+    word-wrap: break-word
+}
