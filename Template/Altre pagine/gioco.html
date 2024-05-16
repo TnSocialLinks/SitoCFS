@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <br>
+    <br>      
+    <iframe src="https://i.simmer.io/@Tekia2026/virus-hunter" id="myvideo" style="width:900px;height:600px"></iframe>
+    <br>
+    <br>
+    <button onclick="openFullscreen();">Fullscreen</button>
+    <script>
+      var elem = document.getElementById("myvideo");
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { 
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { 
+          elem.msRequestFullscreen();
+        }
+      }
+    </script>
+  </body>
+</html>
