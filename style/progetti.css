@@ -14,10 +14,10 @@
 
 
 #Logo-cooperativa{
-    width: 62;
-    height: 62;
-    left: 106;
-    top: 23;
+    width: 62px;
+    height: 62px;
+    left: 106px;
+    top: 23px;
     position: fixed;
     background: #D9D9D9;
 }
@@ -66,6 +66,7 @@
 
 #image-offerte-container {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
+    height: var(--header-height);
 }
