@@ -1,0 +1,59 @@
+#container {
+    width: 1440px;
+    height: 3729px;
+    position: relative;
+    background: white"
+}
+
+.navbar{
+    width: 100%;
+    height: 108px;
+    position: absolute;
+    background: #1A405A;
+}
+
+
+#Logo-cooperativa{
+    width: 62;
+    height: 62;
+    left: 106;
+    top: 23;
+    position: fixed;
+    background: #D9D9D9;
+}
+
+#OFFERTE {
+    height: 24;
+    left: 25%;
+    top: 22px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: PeroW01-SemiBold;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+#RICHIEDI {
+    height: 24;
+    left: 40%;
+    top: 22px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: PeroW01-SemiBold;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+#COOPERATIVE {
+    height: 24;
+    left: 65%;
+    top: 22px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: PeroW01-SemiBold;
+    font-weight: 600;
+    word-wrap: break-word;
+}
