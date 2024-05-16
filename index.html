@@ -1,19 +1,28 @@
-<html>
-    <header>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style/home.css">
+<html lang="it">
+  <head>
+    <link rel="icon" type="image/x-icon" href="assets/img/2E-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="style/home.css">
+    <title>Nome sito</title>
+  </head>
+  <body>
 
-
-    </header>
-    <body>
-      <nav class="navbar navbar-default">
-          <div id="Logo-cooperativa"></div>
-          <ul class="nav navbar-nav">
-            <li id="OFFERTE"><a href="#">OFFERTE</a></li>
-            <li id="RICHIEDI"><a href="#">RICHIEDI PROGETTO</a></li>
-            <li id="COOPERATIVE"><a href="#">COOPERATIVE SCOLASTICHE</a></li>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="https://www.cooperazionetrentina.it/it" class="nav__logo"><img src="#" class="img-barra"></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home"
+                class="nav__link active-link">OFFERTE</a></li>
+            <li class="nav__item"><a href="#about"
+                class="nav__link">COOPERATIVE SCOLASTICHE</a></li>
+            <li class="nav__item"><a href="#services"
+                class="nav__link">RICHIEDI PROGETTO</a></li>
           </ul>
         </div>
 
@@ -25,16 +34,41 @@
 
     <!-- Sezione a scorrimento immagini-->
 
+    <main class="l-main">
+      <!--========== HOME ==========-->
+      <section class="home" id="home">
+        <div class="home__container bd-container bd-grid">
+          <div class="home__data">
+            <h1 class="home__title">Wow</h1>
+            <h2 class="home__subtitle">Discover the<br> Virus Hunter
+              game</h2><br>By VirusKenner
+          </div>
 
+          <img src="assets/img/2E-removebg-preview.png" alt class="home__img">
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-
-    <footer class="footer section bd-container">
-        <p class="footer__copy">&#169; 2022 2E ITT TRENTO. All rights reserved</p>
+    <footer class="about section bd-container">
+      <div class="about__container bd-grid">
+        <div class="about__data">
+          <span class="home__title">INFO</span>
+          <ul>
+            <li>Numero telefono</li>
+            <li>email</li>
+            <li>via della scuola e classe</li>
+          </ul>
+        </div>
+        <div class="about__data">
+          <span class="home__title">PARTNER</span>
+          <ul>
+            <img src="#"><img src="#"><img src="#"><img src="#">
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights reserved</p>
     </footer>
-
-
-
 
     <!--
             <img style="width: 1442px; height: 862px; left: 1440px; top: 2562px; position: absolute; transform: rotate(180deg); transform-origin: 0 0" src="https://via.placeholder.com/1442x862" />
