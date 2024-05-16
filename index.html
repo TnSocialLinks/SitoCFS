@@ -1,57 +1,51 @@
-<html>
-    <header>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style/home.css">
+<html lang="it">
+  <head>
+    <link rel="icon" type="image/x-icon" href="assets/img/2E-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="style/home.css">
+    <title>Nome sito</title>
+  </head>
+  <body>
 
-
-    </header>
-    <body>
-      <nav class="navbar navbar-default">
-          <div id="Logo-cooperativa"></div>
-          <ul class="nav navbar-nav">
-            <li id="OFFERTE"><a href="#">OFFERTE</a></li>
-            <li id="RICHIEDI"><a href="#">RICHIEDI PROGETTO</a></li>
-            <li id="COOPERATIVE"><a href="#">COOPERATIVE SCOLASTICHE</a></li>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="https://www.cooperazionetrentina.it/it" class="nav__logo"><img src="#" class="img-barra"></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home"
+                class="nav__link active-link">OFFERTE</a></li>
+            <li class="nav__item"><a href="#about"
+                class="nav__link">COOPERATIVE SCOLASTICHE</a></li>
+            <li class="nav__item"><a href="#services"
+                class="nav__link">RICHIEDI PROGETTO</a></li>
           </ul>
         </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-menu'></i>
+        </div>
       </nav>
+    </header>
+
+    <!-- Sezione a scorrimento immagini-->
 
 
-      <div class="container">
-        <header>OFFERTE</header>
-        <div>
-          <p>Titolo</p>
-          <p>Text</p>
-        </div>
-        <div>
-          <p>Titolo</p>
-          <p>Text</p>
-        </div>
-        <div>
-          <p>Titolo</p>
-          <p>Text</p>
-        </div>
-        <button>Scopri di più</button>
 
-      
+    <!-- Footer -->
 
-
-      </div>
-          
-        
-            
+    <footer class="footer section bd-container">
+        <p class="footer__copy">&#169; 2022 2E ITT TRENTO. All rights reserved</p>
+    </footer>
 
 
 
 
-
-
-
-
-
- <!--
+    <!--
             <img style="width: 1442px; height: 862px; left: 1440px; top: 2562px; position: absolute; transform: rotate(180deg); transform-origin: 0 0" src="https://via.placeholder.com/1442x862" />
             <div style="width: 1439px; height: 861px; left: 1px; top: 2562px; position: absolute; background: rgba(3.92, 3.92, 3.92, 0.50)"></div>
             <img style="width: 411px; height: 344px; left: 939px; top: 1214px; position: absolute" src="https://via.placeholder.com/411x344" />
@@ -102,8 +96,11 @@
             <div style="width: 62px; height: 62px; left: 106px; top: 22px; position: absolute; background: #D9D9D9"></div>
             
           </div>-->
-    </body>
+  </body>
 
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-    
+  <!--========== MAIN JS ==========-->
+  <script src="js/home.js"></script>
+
 </html>
