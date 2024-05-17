@@ -52,12 +52,27 @@
       }
   }
 
-  .imagineOfferteContainer{
-    width: 100vh;
-    height: calc(100vh - var(--header-height));
-    padding-top: var(--header-height);
-  }
+.imagineOfferte-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust the max width as needed */
+    margin: auto;
+}
 
-  .imagineOfferte{
-    width: 1000px;
-  }
+.imagineOfferte-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagineOfferte-textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}

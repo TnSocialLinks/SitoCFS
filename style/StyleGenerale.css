@@ -69,7 +69,7 @@ html{
 
 .nav{
     max-width: 1024px;
-    height: var(--header-heightder-height);
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,14 +250,13 @@ html{
 .footer__copy{
   text-align: center;
   font-size: var(--small-font-size);
-  color: var(--text-footer);
+  color: var(--text-color-light);
   margin-top: 3.5rem;
 }
 
 .footer__data {
     text-align: center;
     color: var(--text-footer);
-    font-size: large;
 }
 
 .footer__title{
@@ -266,12 +265,12 @@ html{
     margin-bottom: var(--mb-1);
 }
 
-#instagram {
+.instagram {
   font-size: xx-large;
   color: #708090;
 }
 
-#instagram:hover {
+.instagram:hover {
   background: #f09433;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   -webkit-background-clip: text;
@@ -279,12 +278,12 @@ html{
   background-clip: text;
 }
 
-#email {
+.email {
   font-size: xx-large;
   color: #708090;
 }
 
-#email:hover {
+.email:hover {
   background: white;
   background: linear-gradient(45deg, #ff0000 0%, #ff0000 25%, #ff8f8f 50%, white 75%, white 100%);
   -webkit-background-clip: text;
@@ -440,7 +439,7 @@ img{
 
 /*========== HOME ==========*/
 .home__container{
-  height: calc(100vh /*- var(--header-height)*/);
+  height: calc(100vh - var(--header-height));
   align-content: center;
 }
 
