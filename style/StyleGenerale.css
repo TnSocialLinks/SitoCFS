@@ -69,7 +69,7 @@ html{
 
 .nav{
     max-width: 1024px;
-    height: var(--header-height);
+    height: var(--header-heightder-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -439,7 +439,7 @@ img{
 
 /*========== HOME ==========*/
 .home__container{
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh /*- var(--header-height)*/);
   align-content: center;
 }
 
