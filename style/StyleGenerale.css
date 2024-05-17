@@ -156,7 +156,7 @@ html{
   }
 
   /*========== LAYOUT ==========*/
-.bd-container{
+ .bd-container{
     max-width: 960px;
     width: calc(100% - 2rem);
     margin-left: var(--mb-2);
@@ -299,8 +299,73 @@ html{
 
 
 
+/* Slider Image */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+}
 
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
 
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 
 
@@ -439,10 +504,10 @@ img{
 }
 
 /*========== HOME ==========*/
-.home__container{
+/*.home__container{
   height: calc(100vh - var(--header-height));
   align-content: center;
-}
+}*/
 
 .home__title{
   font-size: var(--biggest-font-size);
@@ -456,10 +521,10 @@ img{
   margin-bottom: var(--mb-4);
 }
 
-.home__img{
+/*.home__img{
   width: 300px;
   justify-self: center;
-}
+}*/
 
 
 
