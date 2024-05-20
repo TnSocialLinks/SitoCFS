@@ -1,45 +1,31 @@
 // script.js
 
 let slideIndex = 0;
-let slideInterval;
+showSlides();
 
-showSlides(slideIndex);
-
-function showSlides(n) {
+function showSlides() {
     let slides = document.querySelectorAll('.carousel-slide');
     let dots = document.querySelectorAll('.dot');
-
-    if (n !== undefined) {
-        slideIndex = n;
-    } else {
-        slideIndex++;
-    }
-
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    }
-    if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-    }
 
     slides.forEach((slide, index) => {
         slide.style.display = 'none';
     });
 
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
     dots.forEach((dot, index) => {
         dot.className = dot.className.replace(' active', '');
     });
 
-    slides[slideIndex].style.display = 'block';
-    dots[slideIndex].className += ' active';
+    slides[slideIndex - 1].style.display = 'block';
+    dots[slideIndex - 1].className += ' active';
 
-    // Reset the interval to restart the automatic sliding
-    clearInterval(slideInterval);
-    slideInterval = setInterval(showSlides, 2000);
+    setTimeout(showSlides, 10000); // Cambia immagine ogni 10 secondi
 }
 
-// Start the automatic slide show
-slideInterval = setInterval(showSlides, 2000);
 
 
 
