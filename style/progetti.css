@@ -1,72 +1,78 @@
-#container {
-    width: 1440px;
-    height: 3729px;
+:root {
+    --header-height: 3rem;
+  
+    /*========== Colors ==========*/
+    --first-color: #069C54;
+    --first-color-alt: #048654;
+    --title-color: #1A405A;
+    --nav-color: white;
+    --text-color: black;
+    --text-footer: #708090;
+    --text-color-light: #A6A6A6;
+    --body-color: #1A405A;
+    --container-color: #FFFFFF;
+    --button-color: #1A405A;
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== Margenes ==========*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+  @media screen and (min-width: 768px){
+    :root{
+        --biggest-font-size: 2.8rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+      }
+  }
+
+.imagineOfferte-container {
     position: relative;
-    background: white"
-}
-
-.navbar{
     width: 100%;
-    height: 108px;
-    position: absolute;
-    background: #1A405A;
+    max-width: 600px; /* Adjust the max width as needed */
+    margin: auto;
 }
 
-
-#Logo-cooperativa{
-    width: 62px;
-    height: 62px;
-    left: 106px;
-    top: 23px;
-    position: fixed;
-    background: #D9D9D9;
-}
-
-#OFFERTE {
-    height: 24;
-    left: 25%;
-    top: 22px;
-    position: absolute;
-    color: white;
-    font-size: 20px;
-    font-family: PeroW01-SemiBold;
-    font-weight: 600;
-    word-wrap: break-word;
-}
-
-#RICHIEDI {
-    height: 24;
-    left: 40%;
-    top: 22px;
-    position: absolute;
-    color: white;
-    font-size: 20px;
-    font-family: PeroW01-SemiBold;
-    font-weight: 600;
-    word-wrap: break-word;
-}
-
-#COOPERATIVE {
-    height: 24;
-    left: 65%;
-    top: 22px;
-    position: absolute;
-    color: rgb(201, 111, 111);
-    font-size: 20px;
-    font-family: PeroW01-SemiBold;
-    font-weight: 600;
-    word-wrap: break-word;
-}
-
-#offerte-container {
+.imagineOfferte-container img {
     width: 100%;
-    height: 1000px;
-
+    height: auto;
+    display: block;
 }
 
-#image-offerte-container {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    height: var(--header-height);
+.imagineOfferte-textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
 }
