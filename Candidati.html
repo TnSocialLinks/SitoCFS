@@ -1,33 +1,114 @@
-<html>
-    <header>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style/Candidati.css">
+<html lang="it">
+  <head>
+    <link rel="icon" type="image/x-icon"
+      href="assets/img/2E-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--========== BOX ICONS ==========-->
+    <link
+      href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+      rel='stylesheet'>
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="style/Candidati.css">
 
+    <script src="https://kit.fontawesome.com/44a375557a.js" crossorigin="anonymous"></script>
+    <title>Nome sito</title>
+  </head>
+  <body>
 
-    </header>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container"> 
+        <a href="https://www.cooperazionetrentina.it/it" target="_blank"><img src="img/Logo_Cooperazione_Bandiera.svg"></a>
+        <a class="nav__logo"></a>
+        <div class="nav__menu" id="nav-menu">   
+              <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">OFFERTE</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE SCOLASTICHE</a></li>
+                <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
+              </ul>
+        </div>
 
-    <body>
-        <nav class="navbar navbar-default">
-          <div id="Logo-cooperativa"></div>
-          <ul class="nav navbar-nav">
-            <li id="OFFERTE"><a href="#">OFFERTE</a></li>
-            <li id="RICHIEDI"><a href="#">RICHIEDI PROGETTO</a></li>
-            <li id="COOPERATIVE"><a href="#">COOPERATIVE SCOLASTICHE</a></li>
-          </ul>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-menu'></i>
         </div>
       </nav>
-    </body>
-    <body>
-      <section>
-        <div>
-            <div>
-                <h1>Welcome!</h1>
-                <h2>Ready to download<br> the game?</h2><br>By VirusKenner
+    </header>
+
+    <!-- Sezione a scorrimento immagini-->
+
+    <main class="l-main-candidati">
+      <!--========== TESTO ==========-->
+      <section class="home" id="home">
+        <div class="home__container bd-container bd-grid">
+          <div class="home__data">
+            <h1 class="home__title">Manca poco al tuo progetto!</h1>
+            <p class="home__subtitle">AHdiowados dijoe  ijodw a ubi afoe jfeadiow dj dijosaj diao  djio ajdakls djalkfkjs hfasjkd haoid jwkadhskjdhwad</p>
+          </div>
+          <div class="box-richieste">
+            <div class="sezione">
+              <label for="nome">Nome del progetto</label>
+              <br>
+              <input class="input-box" type="text" id="nome" minlength="1" required>
             </div>
 
+            <div class="sezione">
+              <label for="sezione2">Sezione 2</label>
+              <br>
+              <input class="input-box" type="text" id="sezione2" minlength="1" required>
+            </div>
+
+            <div class="sezione">
+              <label for="sezione3">Sezione 3</label>
+              <br>
+              <input class="input-box" type="text" id="sezione3" minlength="1" required>
+            </div>
+            
+            <button class="button-invia">Invia il progetto -></button>
+          </div>
         </div>
-    </section>
-    </body>
+      </section>
+
+    </main>
+
+    <!-- FOOTER-->
+    <footer class="footer section bd-container">
+      <div class="footer__container bd-grid">
+        <div class="footer__data">
+          <span class="footer__title">INFO</span>
+        </div>
+        <div class="footer__data">
+          <span class="footer__title">PARTNER</span>
+        </div>
+        <div class="footer__data">
+          <ul>
+            <li>Via Brigata Acqui 15 - 38122 Trento</li>
+            <li>e-mail: tnsocialinks@gmail.com</li>
+            <li>&nbsp;</li>
+            <li><a href="https://www.instagram.com/trentinosociallinks?igsh=Y3A5dGFwMXp3dThn" class="instagram" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>&nbsp;<a class="email"><i class="fa-solid fa-m"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__data">
+          <ul>
+            <img src="#"><img src="#"><img src="#"><img src="#">
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights
+        reserved</p>
+    </footer>
+  </body>
+
+
+
+        <!-- SCRIPT DA CAPIRE-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="js/main.js"></script>
+
+
+
+
 </html>
