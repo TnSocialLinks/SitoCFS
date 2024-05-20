@@ -26,11 +26,6 @@ function showSlides() {
     setTimeout(showSlides, 10000); // Cambia immagine ogni 10 secondi
 }
 
-
-
-
-
-
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -57,7 +52,7 @@ function linkAction() {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-/*const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
     const scrollY = window.scrollY
@@ -74,38 +69,7 @@ function scrollActive(){
         }
     })
 }
-window.addEventListener('scroll', scrollActive)*/
-function scrollActive() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const pageHeight = document.body.offsetHeight;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute('id');
-        const link = document.querySelector('.nav__menu a[href*="' + sectionId + '"]');
-
-        // Controllo sezione attiva
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            link.classList.add('active-link');
-        } else {
-            link.classList.remove('active-link');
-        }
-    });
-
-    // Controllo fine pagina
-    const lastSectionId = sections[sections.length - 1].getAttribute('id');
-    const lastLink = document.querySelector('.nav__menu a[href*="' + lastSectionId + '"]');
-    if (scrollY + windowHeight >= pageHeight) {
-        lastLink.classList.add('active-link');
-    } else {
-        lastLink.classList.remove('active-link');
-    }
-}
-
-window.addEventListener('scroll', scrollActive);
+window.addEventListener('scroll', scrollActive)
 
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/

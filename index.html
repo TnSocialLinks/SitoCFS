@@ -28,14 +28,15 @@
         <a class="nav__logo"></a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#home"
-                class="nav__link active-link">HOME</a></li>
-            <li class="nav__item"><a href="#about"
+            <li class="nav__item  active-link"><a href="#home"
+                class="nav__link">HOME</a></li>
+            <li class="nav__item"><a href="#offerte"
                 class="nav__link">OFFERTE</a></li>
             <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE
                 SCOLASTICHE</a></li>
-            <li class="nav__item"><a href="#richiediProgetto"
-                class="nav__link">RICHIEDI PROGETTO</a></li>
+            <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
+            <li class="nav__item"><a href="#about-us"
+                class="nav__link">CHI SIAMO</a></li>
           </ul>
         </div>
         <div class="nav__toggle" id="nav-toggle">
@@ -45,10 +46,10 @@
     </header>
 
     <main class="l-main">
-      <section class="image-section">
+      <section class="image-section" id="home">
         <div class="carousel">
             <div class="carousel-slide">
-              <a href=""><img src="img/1.jpg" alt="Immagine 1"></a>
+              <a href="#offerte"><img src="img/1.jpg" alt="Immagine 1"></a>
             </div>
             <div class="carousel-slide">
                 <a href=""><img src="img/2.jpg" alt="Immagine 2"></a>
@@ -57,7 +58,7 @@
                 <a href=""><img src="img/3.jpg" alt="Immagine 3"></a>
             </div>
             <div class="carousel-slide">
-              <a href=""><img src="img/ciao.jpg" alt="Immagine 3"></a>
+              <a href="#about-us"><img src="img/ciao.jpg" alt="Immagine 3"></a>
           </div>
         </div>
         <div class="pagination">
@@ -70,23 +71,29 @@
             ↓
         </div>
     </section>
-
-
       <!--========= RICHIEDI PROGETTO =============-->
-      <section class="about section bd-container" id="about">
-        <div class="about__container bd-grid">
-          <div class="about__data">
-            <span class="section-subtitle about__initial">Website</span>
-            <h2 class="section-title about__initial">Have you already <br>
-              visited our site?</h2>
-            <p class="about__description">No... What are you waiting for, go to
-              see it now</p>
-            <a href="http://yellowfever.rf.gd" class="button">Start now</a>
-          </div>
-          <img src="assets/img/Zanzara2.jpg" alt class="about__img">
+      <section class="offerte section bd-container" id="offerte">
+        <h2 class="section-title offerte__initial">OFFERTE</h2>
+        <div class="offerte__container  bd-grid">
+          <div class="image-container">
+            <div class="image-box">
+                <img src="img/1.jpg" alt="Immagine 1">
+                <div class="text-overlay">Testo sopra l'immagine 1</div>
+            </div>
+            <div class="image-box">
+                <img src="img/2.jpg" alt="Immagine 2">
+                <div class="text-overlay">Testo sopra l'immagine 2</div>
+            </div>
+            <div class="image-box">
+                <img src="img/3.jpg" alt="Immagine 3">
+                <div class="text-overlay">Testo sopra l'immagine 3</div>
+            </div>
         </div>
-      </section>
-
+        </div>
+        <div id="button-container">
+          <button class="button" id="button-offerte">Scopri di più <i class="fa-solid fa-arrow-right"></i></button>
+        </div>     
+    </section>
       <section class="richiediProgetto section bd-container"
         id="richiediProgetto">
         <div class="richiediProgetto__container bd-grid">
@@ -101,9 +108,15 @@
           </div>
         </div>
       </section>
-
+      <section class="image-about-us" id="about-us">
+          <div class="about-us">
+            <div class="about-us-slide">
+               <a href="#offerte"><img src="img/ciao.jpg" class="img-about"></a>
+               <div class="text-overlay-about">Testo sopra l'immagine 3<br><br></div>
+            </div>
+          </div>
+      </section>
     </main>
-
     <!-- FOOTER-->
     <footer class="footer section bd-container">
       <div class="footer__container bd-grid">
@@ -119,11 +132,11 @@
             <li>
               <a
                 href="https://www.instagram.com/trentinosociallinks?igsh=Y3A5dGFwMXp3dThn"
-                id="instagram" target="_blank">
+                class="instagram" target="_blank">
                 <i class="fa-brands fa-square-instagram"></i>
               </a>
               &nbsp;
-              <a id="email"><i class="fa-solid fa-m"></i></a>
+              <a class="email"><i class="fa-solid fa-m"></i></a>
             </li>
           </ul>
         </div>
@@ -144,7 +157,6 @@
       <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights
         reserved</p>
     </footer>
-
     <!-- SCRIPT DA CAPIRE-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/main.js"></script>
