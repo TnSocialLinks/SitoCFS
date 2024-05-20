@@ -69,6 +69,40 @@ html {
 
 /*========== BARRA DI NAVIGAZIONE ============*/
 
+<<<<<<< HEAD
+.nav{
+    max-width: 1024px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 768px){
+    .nav__menu{
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 0 1rem;
+      text-align: center;
+      background-color: var(--body-color);
+      transition: .4s;
+      box-shadow: 0 4px 4px rgba(0,0,0,.1);
+      border-radius: 0 0 1rem 1rem;
+      z-index: var(--z-fixed);
+    }
+  }
+  
+  .nav__item{
+    margin-bottom: var(--mb-2);
+  }
+  
+  .nav__link, .nav__logo, .nav__toggle{
+    color: var(--nav-color);
+    font-weight: var(--font-medium);
+  }
+=======
 .nav {
   max-width: 1024px;
   height: 3rem;
@@ -76,6 +110,7 @@ html {
   justify-content: space-between;
   align-items: center;
 }
+>>>>>>> 9095a355d619faa21d056edae436698c90f02fa8
 
 @media screen and (max-width: 768px) {
   .nav__menu {
@@ -256,14 +291,19 @@ html {
 .footer__copy {
   text-align: center;
   font-size: var(--small-font-size);
-  color: var(--text-footer);
+  color: var(--text-color-light);
   margin-top: 3.5rem;
 }
 
 .footer__data {
+<<<<<<< HEAD
+    text-align: center;
+    color: var(--text-footer);
+=======
   text-align: center;
   color: var(--text-footer);
   font-size: large;
+>>>>>>> 9095a355d619faa21d056edae436698c90f02fa8
 }
 
 .footer__data .footer__title {
@@ -280,12 +320,12 @@ html {
   vertical-align: top;
 }
 
-#instagram {
+.instagram {
   font-size: xx-large;
   color: #708090;
 }
 
-#instagram:hover {
+.instagram:hover {
   background: #f09433;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   -webkit-background-clip: text;
@@ -293,12 +333,12 @@ html {
   background-clip: text;
 }
 
-#email {
+.email {
   font-size: xx-large;
   color: #708090;
 }
 
-#email:hover {
+.email:hover {
   background: white;
   background: linear-gradient(45deg, #ff0000 0%, #ff0000 25%, #ff8f8f 65%, white 75%, white 100%);
   -webkit-background-clip: text;
@@ -620,10 +660,15 @@ img {
 }
 
 /*========== HOME ==========*/
+<<<<<<< HEAD
+.home__container{
+  height: calc(100vh - var(--header-height));
+=======
 .home__container {
   height: calc(100vh
       /*- var(--header-height)*/
     );
+>>>>>>> 9095a355d619faa21d056edae436698c90f02fa8
   align-content: center;
 }
 
