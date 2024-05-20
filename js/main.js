@@ -1,55 +1,31 @@
-// script.js
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.querySelectorAll('.carousel-slide');
-    let dots = document.querySelectorAll('.dot');
-
-    slides.forEach((slide, index) => {
-        slide.style.display = 'none';
-    });
-
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
-    dots.forEach((dot, index) => {
-        dot.className = dot.className.replace(' active', '');
-    });
-
-    slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' active';
-
-    setTimeout(showSlides, 10000); // Cambia immagine ogni 10 secondi
-}
-
 /*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
+const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
-
+    nav = document.getElementById(navId)
+    
     // Validate that variables exist
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
             // We add the show-menu class to the div tag with the nav__menu class
             nav.classList.toggle('show-menu')
         })
     }
 }
-showMenu('nav-toggle', 'nav-menu')
+showMenu('nav-toggle','nav-menu')
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction() {
+function linkAction(){
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
+
+
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
@@ -136,4 +112,3 @@ sr.reveal(`.home__data, .home__img,
 })
 
 
-/*====================== IMAGE SLIDESHOW ====================*/
