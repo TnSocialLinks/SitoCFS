@@ -69,7 +69,6 @@ html {
 
 /*========== BARRA DI NAVIGAZIONE ============*/
 
-<<<<<<< HEAD
 .nav{
     max-width: 1024px;
     height: var(--header-height);
@@ -102,7 +101,7 @@ html {
     color: var(--nav-color);
     font-weight: var(--font-medium);
   }
-=======
+
 .nav {
   max-width: 1024px;
   height: 3rem;
@@ -110,7 +109,6 @@ html {
   justify-content: space-between;
   align-items: center;
 }
->>>>>>> 9095a355d619faa21d056edae436698c90f02fa8
 
 @media screen and (max-width: 768px) {
   .nav__menu {
@@ -296,14 +294,9 @@ html {
 }
 
 .footer__data {
-<<<<<<< HEAD
-    text-align: center;
-    color: var(--text-footer);
-=======
   text-align: center;
   color: var(--text-footer);
   font-size: large;
->>>>>>> 9095a355d619faa21d056edae436698c90f02fa8
 }
 
 .footer__data .footer__title {
@@ -660,15 +653,15 @@ img {
 }
 
 /*========== HOME ==========*/
-<<<<<<< HEAD
+
 .home__container{
   height: calc(100vh - var(--header-height));
-=======
+}
 .home__container {
   height: calc(100vh
-      /*- var(--header-height)*/
+      var(--header-height)
     );
->>>>>>> 9095a355d619faa21d056edae436698c90f02fa8
+
   align-content: center;
 }
 
