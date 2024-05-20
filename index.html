@@ -1,138 +1,158 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <link rel="icon" type="image/x-icon" href="assets/img/2E-removebg-preview.png">
+  <head>
+    <link rel="icon" type="image/x-icon"
+      href="assets/img/2E-removebg-preview.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--========== BOX ICONS ==========-->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+      rel='stylesheet'>
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="style/StyleGenerale.css">
 
-    <script src="https://kit.fontawesome.com/44a375557a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/44a375557a.js"
+      crossorigin="anonymous"></script>
+    
     <title>Nome sito</title>
-</head>
-<body>
+  </head>
+  <body>
 
     <!--========== HEADER ==========-->
     <header class="l-header" id="header">
-        <nav class="nav bd-container">
-            <a href="https://www.cooperazionetrentina.it/it" target="_blank">
-                <img src="img/Logo_Cooperazione_Bandiera.svg">
-            </a>
-            <a class="nav__logo"></a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">OFFERTE</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE SCOLASTICHE</a></li>
-                    <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
-                </ul>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
+      <nav class="nav bd-container">
+        <a href="https://www.cooperazionetrentina.it/it" target="_blank">
+          <img src="img/Logo_Cooperazione_Bandiera.svg">
+        </a>
+        <a class="nav__logo"></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home"
+                class="nav__link active-link">HOME</a></li>
+            <li class="nav__item"><a href="#about"
+                class="nav__link">OFFERTE</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE
+                SCOLASTICHE</a></li>
+            <li class="nav__item"><a href="#richiediProgetto"
+                class="nav__link">RICHIEDI PROGETTO</a></li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-menu'></i>
+        </div>
+      </nav>
     </header>
-
-    <!-- Sezione a scorrimento immagini-->
-
-    
 
     <main class="l-main">
 
       <section class="home section bd-container">
-        <img id="slideshow" src="immagine1.jpg" alt="Slideshow">
-    </section>
-      
-        <!--========= RICHIEDI PROGETTO =============-->
-        <section class="about section bd-container" id="about">
-            <div class="about__container bd-grid">
-                <div class="about__data">
-                    <span class="section-subtitle about__initial">Website</span>
-                    <h2 class="section-title about__initial">Have you already <br> visited our site?</h2>
-                    <p class="about__description">No... What are you waiting for, go to see it now</p>
-                    <a href="http://yellowfever.rf.gd" class="button">Start now</a>
-                </div>
-                <img src="assets/img/Zanzara2.jpg" alt="" class="about__img">
-            </div>
-        </section>
+        <div class="slideshow-container">
 
-        <section class="richiediProgetto section bd-container" id="richiediProgetto">
-            <div class="richiediProgetto__container bd-grid">
-                <img src="assets/img/Zanzara2.jpg" alt class="richiediProgetto__img">
-                <div class="richiediProgetto__data">
-                    <h2 class="section-title richiediProgetto__initial">RICHIEDI IL<br>TUO PROGETTO</h2>
-                    <p class="richiediProgetto__description">Richiedi che il tuo progetto venga inserito<br></p>
-                    <a href="Landing_Progetti.html" class="button">Richiedi il tuo progetto <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                </div>
-            </div>
-        </section>
+          <div class="mySlides fade">
+            <img src="img/1.jpg" alt="Image 1" class="img__home">
+          </div>
 
-        
+          <div class="mySlides fade">
+            <img class="img__home" src="img/2.jpg" alt="Image 2">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/3.jpg" alt="Image 3" class="img__home">
+          </div>
+          <div class="mySlides fade">
+            <img src="img/ciao.jpg" alt="Image 4" class="img__home">
+          </div>
+
+          <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlide(1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </section>
+
+      <!--========= RICHIEDI PROGETTO =============-->
+      <section class="about section bd-container" id="about">
+        <div class="about__container bd-grid">
+          <div class="about__data">
+            <span class="section-subtitle about__initial">Website</span>
+            <h2 class="section-title about__initial">Have you already <br>
+              visited our site?</h2>
+            <p class="about__description">No... What are you waiting for, go to
+              see it now</p>
+            <a href="http://yellowfever.rf.gd" class="button">Start now</a>
+          </div>
+          <img src="assets/img/Zanzara2.jpg" alt class="about__img">
+        </div>
+      </section>
+
+      <section class="richiediProgetto section bd-container"
+        id="richiediProgetto">
+        <div class="richiediProgetto__container bd-grid">
+          <img src="assets/img/Zanzara2.jpg" alt class="richiediProgetto__img">
+          <div class="richiediProgetto__data">
+            <h2 class="section-title richiediProgetto__initial">RICHIEDI
+              IL<br>TUO PROGETTO</h2>
+            <p class="richiediProgetto__description">Richiedi che il tuo
+              progetto venga inserito<br></p>
+            <a href="Landing_Progetti.html" class="button">Richiedi il tuo
+              progetto <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <!-- FOOTER-->
     <footer class="footer section bd-container">
-        <div class="footer__container bd-grid">
-            <div class="footer__data">
-                <span class="home__title">INFO</span>
-            </div>
-            <div class="footer__data">
-                <span class="home__title">PARTNER</span>
-            </div>
-            <div class="footer__data">
-                <ul>
-                    <li>Via Brigata Acqui 15 - 38122 Trento</li>
-                    <li>E-mail: tnsocialinks@gmail.com</li>
-                    <li>&nbsp;</li>
-                    <li>
-                        <a href="https://www.instagram.com/trentinosociallinks?igsh=Y3A5dGFwMXp3dThn" id="instagram" target="_blank">
-                            <i class="fa-brands fa-square-instagram"></i>
-                        </a>
-                        &nbsp;
-                        <a id="email"><i class="fa-solid fa-m"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__data">
-                <ul>
-                    <img src="#" alt="Artigianelli">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                </ul>
-            </div>
+      <div class="footer__container bd-grid">
+        <div class="footer__data">
+          <span class="footer__title">INFO</span>
+          <br>
+          <br>
+          <br>
+          <ul>
+            <li>Via Brigata Acqui 15 - 38122 Trento</li>
+            <li>E-mail: tnsocialinks@gmail.com</li>
+            <li>&nbsp;</li>
+            <li>
+              <a
+                href="https://www.instagram.com/trentinosociallinks?igsh=Y3A5dGFwMXp3dThn"
+                id="instagram" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              &nbsp;
+              <a id="email"><i class="fa-solid fa-m"></i></a>
+            </li>
+          </ul>
         </div>
-        <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights reserved</p>
+        <div class="footer__data">
+          <span class="footer__title">PARTNER</span>
+          <br>
+          <br>
+          <br>
+
+          <ul>
+            <img src="#" alt="Artigianelli">
+            <img src="#">
+            <img src="#">
+            <img src="#">
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights
+        reserved</p>
     </footer>
 
     <!-- SCRIPT DA CAPIRE-->
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--========== MAIN JS ==========-->
     <script src="js/main.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          const images = [
-              "img/1.jpg",
-              "img/2.jpg",
-              "img/3.jpg",
-              "img/ciao.jpg",
-          ];
-          let currentIndex = 0;
-          const imgElement = document.getElementById("slideshow");
-    
-          function changeImage() {
-              currentIndex = (currentIndex + 1) % images.length;
-              imgElement.src = images[currentIndex];
-          }
-    
-          setInterval(changeImage, 4000);
-      });
-    </script>
-</body>
-
-
-
+  </body>
 </html>
