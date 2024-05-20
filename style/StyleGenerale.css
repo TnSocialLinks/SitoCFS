@@ -71,7 +71,7 @@ html {
 
 .nav {
   max-width: 1024px;
-  height: var(--header-heightder-height);
+  height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -307,7 +307,7 @@ html {
 }
 
 /*============ SLIDE SHOW =================*/
-
+/*
 * {
   box-sizing: border-box;
 }
@@ -320,8 +320,11 @@ body {
 
 .slideshow-container {
   position: relative;
-  max-width: 1000px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Allinea al fondo 
+  height: 100vh;  Altezza dell'intera finestra 
 }
 
 .mySlides {
@@ -329,9 +332,9 @@ body {
 }
 
 .img__home {
-  vertical-align: middle;
+  /*vertical-align: middle;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .prev,
@@ -364,7 +367,7 @@ body {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: auto;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -377,7 +380,7 @@ body {
 }
 
 .fade {
-  -webkit-animation-name: slideRight; /* Animazione di scorrimento da sinistra a destra */
+  -webkit-animation-name: slideRight; /* Animazione di scorrimento da sinistra a destra 
   -webkit-animation-duration: 1.5s;
   animation-name: slideRight;
   animation-duration: 1.5s;
@@ -405,6 +408,68 @@ body {
     left: 0%;
     opacity: 1;
   }
+}*/
+
+.image-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 50px; /* Altezza della navbar */
+  box-sizing: border-box;
+}
+
+.carousel {
+  margin-top: 3rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.carousel-slide img {
+  max-height: calc(100vh); /* Altezza dello schermo meno la navbar */
+  width: 100%;
+}
+
+.pagination {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 6px 0;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  color: white;
 }
 
 
@@ -574,10 +639,6 @@ img {
   margin-bottom: var(--mb-4);
 }
 
-/*.home__img{
-  width: 300px;
-  justify-self: center;
-}*/
 
 
 

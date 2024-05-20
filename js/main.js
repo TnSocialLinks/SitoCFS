@@ -1,55 +1,48 @@
-/*==================== SLIDE MENU ====================*/
-let slideIndex = 1;
-showSlide();
+// script.js
 
-function plusSlide(n) {
-    showSlides(slideIndex += n)
-}
+let slideIndex = 0;
+let slideInterval;
 
-function plusSlides(n) {
-    showSlide(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlide(slideIndex = n);
-}
-
-function showSlide(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-
-    // Imposta il timer per aggiornare automaticamente la slide ogni 3 secondi
-    setTimeout(function () {
-        plusSlides(1);
-    }, 10000);
-}
+showSlides(slideIndex);
 
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    let slides = document.querySelectorAll('.carousel-slide');
+    let dots = document.querySelectorAll('.dot');
+
+    if (n !== undefined) {
+        slideIndex = n;
+    } else {
+        slideIndex++;
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach((slide, index) => {
+        slide.style.display = 'none';
+    });
+
+    dots.forEach((dot, index) => {
+        dot.className = dot.className.replace(' active', '');
+    });
+
+    slides[slideIndex].style.display = 'block';
+    dots[slideIndex].className += ' active';
+
+    // Reset the interval to restart the automatic sliding
+    clearInterval(slideInterval);
+    slideInterval = setInterval(showSlides, 2000);
 }
+
+// Start the automatic slide show
+slideInterval = setInterval(showSlides, 2000);
+
+
+
 
 
 /*==================== SHOW MENU ====================*/
