@@ -778,6 +778,9 @@ a {
 
 
 /*========== MEDIA QUERIES ==========*/
+
+
+
 @media screen and (min-width: 576px){
   .home__container,
   .about__container,
@@ -860,6 +863,8 @@ a {
   }
 }
 
+
+
 @media screen and (min-width: 960px){
   .bd-container{
     margin-left: auto;
@@ -876,9 +881,36 @@ a {
   }
 }
 
-@media screen and (min-width: 1440) {
+@media screen and (min-width: 1440px) {
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    max-width: 1200px;
+  }
+
+  .image-container{
+    gap: 30px;
+  }
+
+  .image-offerte {
+    height: 300px;
+    width: 380px;
+  }
+
+  #button-offerte {
+    font-size: larger;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
 
 }
+
+
+
+
 
 
 @media screen and (max-width: 768px) {
