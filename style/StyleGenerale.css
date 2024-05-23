@@ -557,11 +557,6 @@ a {
   background-color: var(--first-color-alt);
 }
 
-.scrolltop__icon {
-  font-size: 1.8rem;
-  color: var(--body-color);
-}
-
 /* Show scrolltop */
 .show-scroll {
   visibility: visible;
@@ -628,28 +623,15 @@ a {
 @media screen and (min-width: 576px){
   .home__container,
   .about__container,
-  .app__container, .footer__container, .richiediProgetto__container, .offerte__container, .image-container, .about-us__container{
+  .app__container, .footer__container, .richiediProgetto__container, .offerte__container, .image-container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
   }
 
   .about__data, .about__initial,
   .app__data, .app__initial,
-  .contact__container, .contact__initial, .footer__data, .richiediProgetto__data, .richiediProgetto__initial, .offerte__data, .offerte__initial, .about__container, .about__initial{
+  .contact__container, .contact__initial, .footer__data, .richiediProgetto__data, .richiediProgetto__initial, .offerte__data, .offerte__initial{
     text-align: initial;
-  }
-
-  .about__img, .app__img{
-    width: 380px;
-    order: -1;
-  }
-
-  .contact__container{
-    grid-template-columns: 1.75fr 1fr;
-    align-items: center;
-  }
-  .contact__button{
-    justify-self: center;
   }
 }
 
@@ -680,19 +662,6 @@ a {
     position: initial;
     margin-left: var(--mb-2);
   }
-
-  .home__container{
-    height: 100vh;
-    justify-items: center;
-  }
-
-  .menu__content{
-    padding: 1.5rem;
-  }
-
-  .app__store{
-    margin: 0 var(--mb-1) 0 0;
-  }
 }
 
 
@@ -701,15 +670,6 @@ a {
   .bd-container{
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .home__img{
-    width: 500px;
-  }
-
-  .about__container,
-  .app__container{
-    column-gap: 7rem;
   }
 }
 

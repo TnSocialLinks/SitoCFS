@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.main-container {
+    background-image: url('../img/MontagneBelle.jpg'); /* Sostituisci con il percorso reale della tua immagine */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Altezza della sezione */
+    max-height: 700px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+    width: 100%; /* Assicura che il contenitore copra tutta la larghezza */
+}
+
+
+.footer {
+    background-color: white;
+    color: black; /* Cambia il colore del testo per contrasto con il fondo bianco */
+    height: 100px;
+    max-height: 300px;
+    width: 100%; /* Assicura che la sezione copra tutta la larghezza */
+}
+
+
