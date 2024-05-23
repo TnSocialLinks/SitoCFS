@@ -34,6 +34,7 @@
     --mb-4: 2rem;
     --mb-5: 2.5rem;
     --mb-6: 3rem;
+    --header-hei: 0;
   
     /*========== z index ==========*/
     --z-tooltip: 10;
@@ -49,6 +50,8 @@
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
+
+        --header-hei: 72px;
       }
   }
 
@@ -58,18 +61,18 @@
 }
 
 .main-progetti{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--mb-6);
+    padding-bottom: var(--mb-6);
 }
 
 .progetto-container {
     display: grid;
     font-size: var(--h2-font-size);
-    gap: 10px;
+    gap: var(--mb-1);
     width: 100%;
     margin: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-2);
 }
 
 .progetto-layoutUno {
@@ -97,7 +100,7 @@
 
 .progetto-titoloProgetto {
     position: absolute;
-    bottom: 5px;
+    top: 5px;
     left: 10px;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -113,7 +116,7 @@
 }
 
 .imagineOfferte-container img {
-    margin-top: 72px;
+    margin-top: var(--header-hei);
     width: 100%;
     height: auto;
     display: block;
