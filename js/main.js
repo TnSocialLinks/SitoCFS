@@ -1,84 +1,34 @@
-/*==================== SLIDE MENU ====================*/
-let slideIndex = 1;
-showSlide();
-
-function plusSlide(n) {
-    showSlides(slideIndex += n)
-}
-
-function plusSlides(n) {
-    showSlide(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlide(slideIndex = n);
-}
-
-function showSlide(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-
-    // Imposta il timer per aggiornare automaticamente la slide ogni 3 secondi
-    setTimeout(function () {
-        plusSlides(1);
-    }, 10000);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-
 /*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
+const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
-
+    nav = document.getElementById(navId)
+    
     // Validate that variables exist
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
             // We add the show-menu class to the div tag with the nav__menu class
             nav.classList.toggle('show-menu')
         })
     }
 }
-showMenu('nav-toggle', 'nav-menu')
+showMenu('nav-toggle','nav-menu')
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction() {
+function linkAction(){
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+
+
+
+
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-/*const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
     const scrollY = window.scrollY
@@ -95,38 +45,7 @@ function scrollActive(){
         }
     })
 }
-window.addEventListener('scroll', scrollActive)*/
-function scrollActive() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const pageHeight = document.body.offsetHeight;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute('id');
-        const link = document.querySelector('.nav__menu a[href*="' + sectionId + '"]');
-
-        // Controllo sezione attiva
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            link.classList.add('active-link');
-        } else {
-            link.classList.remove('active-link');
-        }
-    });
-
-    // Controllo fine pagina
-    const lastSectionId = sections[sections.length - 1].getAttribute('id');
-    const lastLink = document.querySelector('.nav__menu a[href*="' + lastSectionId + '"]');
-    if (scrollY + windowHeight >= pageHeight) {
-        lastLink.classList.add('active-link');
-    } else {
-        lastLink.classList.remove('active-link');
-    }
-}
-
-window.addEventListener('scroll', scrollActive);
+window.addEventListener('scroll', scrollActive)
 
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
@@ -183,14 +102,8 @@ const sr = ScrollReveal({
     reset: true
 });
 
-sr.reveal(`.home__data, .home__img,
-            .about__data, .about__img,
-            .services__content, .menu__content,
-            .app__data, .app__img,
-            .contact__data, .contact__button,
-            .footer__content`, {
+sr.reveal('.home__data, .about__data, .services__content, .app__data, .contact__data, .footer__content, .richiediProgetto', {
     interval: 200
 })
 
 
-/*====================== IMAGE SLIDESHOW ====================*/

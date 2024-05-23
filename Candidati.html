@@ -1,33 +1,153 @@
-<html>
-    <header>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style/Candidati.css">
-
-
-    </header>
-
-    <body>
-        <nav class="navbar navbar-default">
-          <div id="Logo-cooperativa"></div>
-          <ul class="nav navbar-nav">
-            <li id="OFFERTE"><a href="#">OFFERTE</a></li>
-            <li id="RICHIEDI"><a href="#">RICHIEDI PROGETTO</a></li>
-            <li id="COOPERATIVE"><a href="#">COOPERATIVE SCOLASTICHE</a></li>
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <link rel="icon" type="image/x-icon" href="assets/img/2E-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/Candidati.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+    <script src="https://kit.fontawesome.com/44a375557a.js" crossorigin="anonymous"></script>
+    <title>Nome sito</title>
+  </head>
+  <body class="body-candidati">
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="https://www.cooperazionetrentina.it/it" target="_blank">
+          <img src="img/Logo_Cooperazione_Bandiera.svg">
+        </a>
+        <a class="nav__logo"></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">OFFERTE</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE SCOLASTICHE</a></li>
+            <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
           </ul>
         </div>
-      </nav>
-    </body>
-    <body>
-      <section>
-        <div>
-            <div>
-                <h1>Welcome!</h1>
-                <h2>Ready to download<br> the game?</h2><br>By VirusKenner
-            </div>
-
+        <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-menu'></i>
         </div>
-    </section>
-    </body>
+      </nav>
+    </header>
+    <main class="l-main-candidati">
+      <section class="home" id="home">
+        <div class="homeC__container bd-container bd-grid">
+          <div class="about__data">
+            <h1 class="homeC__title">Manca poco al tuo progetto!</h1>
+            <p class="homeC__subtitle">Testo descrittivo...</p>
+          </div>
+          <div class="box-richieste">
+            <div class="sezione">
+              <label for="nome">Nome del progetto</label>
+              <br>
+              <input class="input-box" type="text" id="nome" minlength="1" required>
+            </div>
+            <div class="sezione">
+              <label for="sezione2">Sezione 2</label>
+              <br>
+              <input class="input-box" type="text" id="sezione2" minlength="1" required>
+            </div>
+            <div class="sezione">
+              <label for="sezione3">Sezione 3</label>
+              <br>
+              <input class="input-box" type="text" id="sezione3" minlength="1" required>
+            </div>
+            <div class="filter-container">
+              <div class="mb-3 col-12 col-md-6 col-lg-3 text-center">
+                <p class="sezione">Genere</p>
+                <div class="w-70 d-inline">
+                  <select id="categories" class="selectpicker" title="Nessuno selezionato" multiple data-size="8" data-live-search="true" tabindex="-98">
+                    <option value="Arti Marziali">Arti Marziali</option>
+                    <option value="Avventura">Avventura</option>
+                    <option value="Avanguardia">Avanguardia</option>
+                    <option value="Azione">Azione</option>
+                    <option value="Bambini">Bambini</option>
+                    <option value="Commedia">Commedia</option>
+                    <option value="Demoni">Demoni</option>
+                    <option value="Drammatico">Drammatico</option>
+                    <option value="Ecchi">Ecchi</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Gioco">Gioco</option>
+                    <option value="Harem">Harem</option>
+                    <option value="Hentai">Hentai</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Josei">Josei</option>
+                    <option value="Magia">Magia</option>
+                    <option value="Mecha">Mecha</option>
+                    <option value="Militari">Militari</option>
+                    <option value="Mistero">Mistero</option>
+                    <option value="Musicale">Musicale</option>
+                    <option value="Parodia">Parodia</option>
+                    <option value="Polizia">Polizia</option>
+                    <option value="Psicologico">Psicologico</option>
+                    <option value="Romantico">Romantico</option>
+                    <option value="Samurai">Samurai</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Scolastico">Scolastico</option>
+                    <option value="Seinen">Seinen</option>
+                    <option value="Sentimentale">Sentimentale</option>
+                    <option value="Shoujo Ai">Shoujo Ai</option>
+                    <option value="Shoujo">Shoujo</option>
+                    <option value="Shounen Ai">Shounen Ai</option>
+                    <option value="Shounen">Shounen</option>
+                    <option value="Slice of Life">Slice of Life</option>
+                    <option value="Soprannaturale">Soprannaturale</option>
+                    <option value="Spazio">Spazio</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Storico">Storico</option>
+                    <option value="Superpoteri">Superpoteri</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Vampiri">Vampiri</option>
+                    <option value="Veicoli">Veicoli</option>
+                    <option value="Yaoi">Yaoi</option>
+                    <option value="Yuri">Yuri</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button class="button-invia">Invia il progetto -></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer section bd-container">
+      <div class="footerC__container bd-grid">
+        <div class="footerC__data">
+          <span class="footerC__title">INFO</span>
+        </div>
+        <div class="footerC__data">
+          <span class="footerC__title">PARTNER</span>
+        </div>
+        <div class="footerC__data">
+          <ul>
+            <li>Via Brigata Acqui 15 - 38122 Trento</li>
+            <li>e-mail: tnsocialinks@gmail.com</li>
+            <li>&nbsp;</li>
+            <li><a href="https://www.instagram.com/trentinosociallinks?igsh=Y3A5dGFwMXp3dThn" class="instagram" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>&nbsp;<a class="email"><i class="fa-solid fa-m"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__data">
+          <ul>
+            <img src="#"><img src="#"><img src="#"><img src="#">
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights reserved</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+    <script src="js/slide.js"></script>
+
+  </body>
 </html>
