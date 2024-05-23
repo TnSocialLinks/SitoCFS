@@ -349,15 +349,21 @@ html {
   font-size: medium;
 }
 
-.image-about-us {
+
+.about-us-section {
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 50px;
   box-sizing: border-box;
+  background-image: url("../img/ciao.jpg"); /* Percorso dell'immagine di background */
+  background-size: cover; /* Assicura che l'immagine copra l'intera sezione */
+  background-position: center; /* Centra l'immagine nella sezione */
+  background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+  width: auto; /* Larghezza della sezione */
+  height: auto; /* Altezza della sezione (puoi cambiare questo valore secondo necessità) */
 }
 
 .about-us {
@@ -372,18 +378,12 @@ html {
 
 .about-us-slide {
   min-width: 100%;
-  height: calc(100vh);
+  height: calc(100vh) ;
   vertical-align: bottom;
   align-items: flex-end;
   justify-content: center;
 }
 
-
-
-.img-about {
-  max-height: calc(100vh); /* Altezza dello schermo meno la navbar */
-  width: 100%;
-}
 
 .text-overlay-about {
   position: absolute;
@@ -400,6 +400,9 @@ html {
   width: 310px; /* Larghezza delle immagini */
   height: 250px; /* Altezza delle immagini */
 }
+
+
+
 
 
 
@@ -625,14 +628,14 @@ a {
 @media screen and (min-width: 576px){
   .home__container,
   .about__container,
-  .app__container, .footer__container, .richiediProgetto__container, .offerte__container, .image-container{
+  .app__container, .footer__container, .richiediProgetto__container, .offerte__container, .image-container, .about-us__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
   }
 
   .about__data, .about__initial,
   .app__data, .app__initial,
-  .contact__container, .contact__initial, .footer__data, .richiediProgetto__data, .richiediProgetto__initial, .offerte__data, .offerte__initial{
+  .contact__container, .contact__initial, .footer__data, .richiediProgetto__data, .richiediProgetto__initial, .offerte__data, .offerte__initial, .about__container, .about__initial{
     text-align: initial;
   }
 
@@ -787,22 +790,11 @@ a {
   .carousel-slide img {
     max-height: 400px;
   }
-
-  .image-about-us {
-    position: relative;
-    height: auto;
-    width: 100%;
-    align-items: flex-end;
-  }
   
   .text-overlay-about {
     top: 25%; /* Distanza dal fondo dell'immagine */
     left: 5%; /* Distanza dal lato sinistro dell'immagine */
     font-size: 16px;
-  }
-
-  .about-us-slide {
-    height: 180px;
   }
 }
 
