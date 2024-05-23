@@ -370,8 +370,6 @@ html {
   position: relative;
   display: flex;
   justify-content: right;
-  width: 310px; /* Larghezza delle immagini */
-  height: 250px; /* Altezza delle immagini */
   object-fit: cover;
 }
 
@@ -432,6 +430,7 @@ html {
 .img-about {
   max-height: calc(100vh); /* Altezza dello schermo meno la navbar */
   width: 100%;
+  vertical-align: bottom;
 }
 
 .text-overlay-about {
@@ -443,6 +442,11 @@ html {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 16px;
+}
+
+.image-offerte {
+  width: 310px; /* Larghezza delle immagini */
+  height: 250px; /* Altezza delle immagini */
 }
 
 
@@ -871,43 +875,20 @@ img {
   }
 }
 
-/* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
-    .home__container {
-        height: 640px;
-    }
-    
-}
 
 
-@media screen and (max-width: 728px) {
-  .image-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .image-section {
-    height: 400px;
-  }
-  .carousel {
-    margin-top: 0;
-  }
-
-  #button-container {
-    justify-content: center;
-  }
-}
 
 
-@media screen and (max-width: 320px) {
+
+@media screen and (max-width: 425px) {
   .image-container {
     flex-direction: column;
     align-items: center;
   }
   .image-box {
     justify-content: center;
-    height: 200;
-    width: 200;
-    object-fit: cover;
+    height: -100;
+    width: -100;
   }
 
   #button-container {
@@ -930,7 +911,7 @@ img {
   }
 
   .image-section {
-    height: 180px;
+    height: 250px;
   }
   
   .carousel {
@@ -938,7 +919,7 @@ img {
 
   }
   .carousel-slide img {
-    max-height: 180px;
+    max-height: 250px;
   }
 
   .image-about-us {
@@ -946,18 +927,52 @@ img {
     height: auto;
     width: 100%;
     align-items: flex-end;
-    box-sizing: unset;
+
   }
   
-  .about-us {
-    margin-bottom: 200px;
+  .text-overlay-about {
+    top: 25%; /* Distanza dal fondo dell'immagine */
+    left: 5%; /* Distanza dal lato sinistro dell'immagine */
+    font-size: 8px;
   }
 
-  .img-about {
-    vertical-align: bottom;
-  }
-    
 }
+
+@media screen and (max-width: 375px) {
+  .down-arrow {
+    font-size: 24px;
+    margin-bottom: 10%;
+  }
+  .image-section {
+    height: 200px;
+  }
+  .carousel-slide img {
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .down-arrow {
+    font-size: 24px;
+    margin-bottom: 10%;
+  }
+  .image-section {
+    height: 180px;
+  }
+  .carousel-slide img {
+    max-height: 180px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
