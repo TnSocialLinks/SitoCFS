@@ -15,25 +15,30 @@
 
 <body>
     <!-- HEADER -->
-    <header class="l-header db-container" id="header">
+    <header class="l-header" id="header">
         <nav class="nav bd-container">
-            <a href="https://www.cooperazionetrentina.it/it" target="_blank"><img
-                    src="img/Logo_Cooperazione_Bandiera.svg"></a>
-            <a class="nav__logo"></a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">OFFERTE</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE SCOLASTICHE</a></li>
-                    <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
-                </ul>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
+          <a href="https://www.cooperazionetrentina.it/it" target="_blank">
+            <img src="img/Logo_Cooperazione_Bandiera.svg">
+          </a>
+          <a class="nav__logo"></a>
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item  active-link"><a href="index.html"
+                  class="nav__link">HOME</a></li>
+              <li class="nav__item"><a href="#offerte"
+                  class="nav__link">OFFERTE</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE
+                  SCOLASTICHE</a></li>
+              <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
+              <li class="nav__item"><a href="#about-us"
+                  class="nav__link">CHI SIAMO</a></li>
+            </ul>
+          </div>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+          </div>
         </nav>
-    </header>
+      </header>
 
     <main class="l-main">
         <!-- IMAGINE OFFERTE -->
@@ -41,13 +46,16 @@
             <img src="img/MontagneBelle.jpg">
             <div class="imagineOfferte-textOverlay">OFFERTE</div>
         </div>
-        <div class="down-arrow">
-            ↓
-        </div>
+
+        <section class="filtro">
+            <div class="bd-container menu-container">
+                <i class='bx bx-menu filtro-icon' id="filtro"></i>
+            </div>
+        </section>
 
         <section class="main-progetti">
             <!-- SEZIONE-->
-            <div class="bd-container" id="def">
+            <div class="bd-container">
                 <div class="progetto-container progetto-layoutUno">
                     <div class="progetto-itemGrid">
                         <img src="img/MontagneBelle.jpg">
@@ -61,7 +69,7 @@
             </div>
 
             <!-- SEZIONE-->
-            <div class="bd-container" id="def">
+            <div class="bd-container">
                 <div class="progetto-container progetto-layoutDue">
                     <div class="progetto-itemGrid">
                         <img src="img/MontagneBelle.jpg">
@@ -75,7 +83,7 @@
             </div>
 
             <!-- SEZIONE-->
-            <div class="bd-container" id="def">
+            <div class="bd-container">
                 <div class="progetto-container progetto-layoutUno">
                     <div class="progetto-itemGrid">
                         <img src="img/MontagneBelle.jpg">
@@ -116,8 +124,10 @@
             </div>
         </div>
         <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights
-            reserved</p>
+            reserved.</p>
     </footer>
+
+    <script src="js/progetti.js"></script>
 </body>
 
 </html>

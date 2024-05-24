@@ -1,3 +1,64 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --first-color: #069C54;
+  --first-color-alt: #048654;
+  --title-color: #1A405A;
+  --nav-color: white;
+  --text-color: black;
+  --text-footer: #708090;
+  --text-color-light: #A6A6A6;
+  --body-color: #1A405A;
+  --container-color: #FFFFFF;
+  --button-color: #1A405A;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -79,68 +140,4 @@ body {
   transform: translateX(-50%);
   font-size: 36px;
   color: rgba(255, 255, 255, 0.8);
-}
-
-/* Offerte Section */
-.offerte-section {
-  padding: 20px;
-  background-color: white;
-  max-width: 1024px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.offerte-section h2 {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.offerte-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-.offerta-item {
-  position: relative;
-  flex: 1 1 calc(33.333% - 10px); /* Tre immagini in una riga con gap */
-  min-width: 300px;
-}
-
-.offerta-item img {
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.offerte-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .offerte-container {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .offerta-item {
-      width: 100%;
-      max-width: 100%;
-  }
 }
