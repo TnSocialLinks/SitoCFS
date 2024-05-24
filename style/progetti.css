@@ -98,6 +98,13 @@
     margin: 0;
 }
 
+.progetto-pulsante{
+    background-color: #1A405A;
+    position: absolute;
+    bottom: 5px;
+    right: 10px; /* ciao */
+}
+
 .progetto-titoloProgetto {
     position: absolute;
     top: 5px;
