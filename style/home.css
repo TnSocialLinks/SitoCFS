@@ -141,3 +141,72 @@ body {
   font-size: 36px;
   color: rgba(255, 255, 255, 0.8);
 }
+
+
+/*========== BARRA DI NAVIGAZIONE ============*/
+
+.nav {
+  max-width: 1024px;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .nav__menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--body-color);
+    transition: .4s;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
+  }
+}
+
+
+
+
+.nav__item {
+  margin-bottom: var(--mb-2);
+}
+
+.nav__link,
+.nav__logo,
+.nav__toggle {
+  color: var(--nav-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link {
+  transition: .3s;
+}
+
+.nav__toggle {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+  top: var(--header-height);
+}
+
+/* Active menu */
+.active-link {
+  font-weight: bolder;
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
