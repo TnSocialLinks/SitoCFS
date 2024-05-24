@@ -1,10 +1,31 @@
 
-//cose...
+/*==================== SHOW MENU ====================*/
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
+    // Validate that variables exist
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            // We add the show-menu class to the div tag with the nav__menu class
+            nav.classList.toggle('show-menu')
+        })
+    }
+}
+showMenu("nav-toggle","nav-menu")
+
+const showFiltro = (filtroId) => {
+    const filtro = document.getElementById(filtroId)
+    if(filtro){
+        filtro.addEventListener('click', () =>{
+            console.log("ciao")
+        })
+    }
+}
+showFiltro("filtro")
 
 document.addEventListener("DOMContentLoaded", function() {
     // Trova tutti gli elementi con la classe "contenitore-pulsante"
     var contenitori = document.querySelectorAll(".progetto-itemGrid");
-
     // Itera attraverso tutti gli elementi trovati
     contenitori.forEach(function(contenitore) {
         // Crea un nuovo elemento <button>
@@ -16,22 +37,4 @@ document.addEventListener("DOMContentLoaded", function() {
         contenitore.appendChild(button);
     });
 });
-/*
-<div class="bd-container">
-                <div class="progetto-container progetto-layoutUno">
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto</div>
-                    </div>
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto Titolo Progetto Titolo Progetto</div>
-                    </div>
-                </div>
-            </div>
-*/
-function apriLista(){
-    const sezione = document.getElementByClassName("main-progetti")
-    
-}
 
