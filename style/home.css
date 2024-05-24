@@ -2,18 +2,34 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
+
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+}
+
+.navbar {
+  height: 50px; /* Altezza della navbar */
+  background-color: #333; /* Colore di sfondo della navbar */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .carousel {
-
   width: 100%;
   height: calc(100vh - 50px); /* Altezza del viewport meno l'altezza della navbar */
-  padding-top: 50px;
   overflow: hidden;
   position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Centra verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px; /* Spazio per la navbar */
+  box-sizing: border-box;
 }
 
 .carousel-inner {
@@ -36,9 +52,9 @@ body {
 
 .carousel-indicators {
   position: absolute;
-  top: 50%; /* Spostiamo i punti a metà altezza del carosello */
-  right: 10px; /* Li posizioniamo a destra del carosello */
-  transform: translateY(-50%); /* Centriamo verticalmente rispetto alla posizione top: 50% */
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
 }
@@ -61,6 +77,70 @@ body {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 36px; /* Aumenta la dimensione della freccia */
+  font-size: 36px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* Offerte Section */
+.offerte-section {
+  padding: 20px;
+  background-color: white;
+  max-width: 1024px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.offerte-section h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.offerte-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.offerta-item {
+  position: relative;
+  flex: 1 1 calc(33.333% - 10px); /* Tre immagini in una riga con gap */
+  min-width: 300px;
+}
+
+.offerta-item img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.offerte-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .offerte-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .offerta-item {
+      width: 100%;
+      max-width: 100%;
+  }
 }
