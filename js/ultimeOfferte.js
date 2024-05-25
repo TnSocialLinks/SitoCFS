@@ -29,8 +29,3 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Errore nella richiesta:', error);
         });
 });
-
-
-
-
-

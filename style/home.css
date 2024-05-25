@@ -6,7 +6,7 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --first-color: #069C54;
+  --first-color: #1A405A;
   --first-color-alt: #048654;
   --title-color: #393939;
   --text-color: #707070;
@@ -60,6 +60,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* 
+
+DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA HOME
+
+*/
 
 body {
   font-family: Arial, sans-serif;
@@ -201,16 +207,29 @@ body {
   text-align: left;
 }
 
+/* Stile per il contenitore del pulsante */
 .offer-button {
   text-align: right;
   margin-top: 20px;
 }
 
-.offer-button button {
-  padding: 10px 20px;
-  font-size: 16px;
+.button {
+  padding: 15px 25px;
+  font-size: 20px;
   cursor: pointer;
+  display: inline-block;
+  background-color: var(--first-color); /* Colore di sfondo predefinito */
+  color: #FFF; /* Colore del testo predefinito */
+  border-radius: .5rem;
+  transition: .3s;
+  border: 2px solid var(--first-color); /* Bordo al passaggio del mouse */
 }
+
+.button:hover {
+  background-color: white; /* Colore di sfondo al passaggio del mouse */
+  color: var(--first-color); /* Colore del testo al passaggio del mouse */
+}
+
 
 .richiedi {
   display: flex;
@@ -248,6 +267,12 @@ body {
   cursor: pointer;
 }
 
+/* 
+
+DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE IL FOOTER
+
+*/
+
 .footer {
   width: 100%;
   box-sizing: border-box;
@@ -281,10 +306,11 @@ body {
   margin-bottom: 10px;
 }
 
+/* 
 
+DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA BARRA DI NAVIGAZIONE SOPRA
 
-
-/* NavBar  */
+*/
 
 .l-header{
   width: 100%;
@@ -374,6 +400,106 @@ a{
   top: var(--header-height);
 }
 
+/* 
+
+DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I PROGETTI
+
+*/
+.main-progetti{
+  padding-bottom: var(--mb-6);
+}
+
+.filtro {
+  padding-top: var(--mb-6);
+  padding-bottom: var(--mb-6);
+}
+
+.filtro-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.progetto-container {
+  display: grid;
+  font-size: var(--h2-font-size);
+  gap: var(--mb-1);
+  width: 100%;
+  margin: 0;
+  /*margin-top: var(--mb-2);*/
+  margin-bottom: var(--mb-2);
+}
+
+.progetto-layoutUno {
+  grid-template-columns: 4fr 6fr;
+}
+
+.progetto-layoutDue {
+  grid-template-columns: 6fr 4fr;
+}
+
+.progetto-itemGrid {
+  position: relative;
+  width: 100%;
+}
+
+.progetto-itemGrid img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+  justify-items: center;
+  display: block;
+  margin: 0;
+}
+
+.progetto-pulsante{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.progetto-titoloProgetto {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  z-index: 1;
+}
+
+.imagineOfferte-container {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  margin: 0;
+}
+
+.imagineOfferte-container img {
+  margin-top: 72px;
+  width: 100%;
+  height: calc(100vh - 72px);
+  display: block;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.imagineOfferte-textOverlay {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  color: rgb(0, 0, 0);
+  font-size: var(--biggest-font-size);
+  font-weight: bold;
+}
+
+
+/* 
+
+DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LE QUERY CHE SERVO PER GESTIRE I DISPOSITIVI PIU' PICCOLI
+
+*/
 
 @media screen and (min-width: 768px){
   .nav{
@@ -398,31 +524,6 @@ a{
   }
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 1024px) {
   .offers {
