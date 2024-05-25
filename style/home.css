@@ -425,7 +425,6 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
   gap: var(--mb-1);
   width: 100%;
   margin: 0;
-  /*margin-top: var(--mb-2);*/
   margin-bottom: var(--mb-2);
 }
 
