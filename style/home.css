@@ -428,13 +428,16 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
   margin-bottom: var(--mb-2);
 }
 
+
+
 .progetto-layoutUno {
-  grid-template-columns: 4fr 6fr;
+  grid-template-columns: none;
 }
 
 .progetto-layoutDue {
-  grid-template-columns: 6fr 4fr;
+  grid-template-columns: none;
 }
+
 
 .progetto-itemGrid {
   position: relative;
@@ -499,6 +502,16 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
 DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LE QUERY CHE SERVO PER GESTIRE I DISPOSITIVI PIU' PICCOLI
 
 */
+
+@media screen and (min-width: 768px) {
+  .progetto-layoutUno {
+    grid-template-columns: 4fr 6fr;
+  }
+  
+  .progetto-layoutDue {
+    grid-template-columns: 6fr 4fr;
+  }
+}
 
 @media screen and (min-width: 768px){
   .nav{
