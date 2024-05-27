@@ -5,16 +5,12 @@
     <link rel="icon" type="image/x-icon" href="assets/img/2E-removebg-preview.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--========== BOX ICONS ==========-->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <!--========== CSS ==========-->
-    <link rel="stylesheet" href="style/StyleGenerale.css">
-    <link rel="stylesheet" href="style/progetti.css">
+    <link rel="stylesheet" href="style/home.css">
     <title>Progetti</title>
 </head>
 
 <body>
-    <!-- HEADER -->
     <header class="l-header" id="header">
         <nav class="nav bd-container">
           <a href="https://www.cooperazionetrentina.it/it" target="_blank">
@@ -53,81 +49,35 @@
             </div>
         </section>
 
-        <section class="main-progetti">
-            <!-- SEZIONE-->
-            <div class="bd-container">
-                <div class="progetto-container progetto-layoutUno">
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto</div>
-                    </div>
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto Titolo Progetto Titolo Progetto</div>
-                    </div>
-                </div>
-            </div>
+        <section id="main-progetti">        </section>
 
-            <!-- SEZIONE-->
-            <div class="bd-container">
-                <div class="progetto-container progetto-layoutDue">
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto</div>
-                    </div>
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto</div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- SEZIONE-->
-            <div class="bd-container">
-                <div class="progetto-container progetto-layoutUno">
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto</div>
-                    </div>
-                    <div class="progetto-itemGrid">
-                        <img src="img/MontagneBelle.jpg">
-                        <div class="progetto-titoloProgetto">Titolo Progetto</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+        <button id="load-more" class="button" onclick="loadProjects()">Carica di più</button>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer section bd-container">
-        <div class="footer__container bd-grid">
-            <div class="footer__data">
-                <span class="home__title">INFO</span>
-            </div>
-            <div class="footer__data">
-                <span class="home__title">PARTNER</span>
-            </div>
-            <div class="footer__data">
-                <ul>
-                    <li>Via Brigata Acqui 15 - 38122 Trento</li>
-                    <li>e-mail: tnsocialinks@gmail.com</li>
-                    <li>&nbsp;</li>
-                    <li><a href="https://www.instagram.com/trentinosociallinks?igsh=Y3A5dGFwMXp3dThn" class="instagram"
-                            target="_blank"><i class="fa-brands fa-square-instagram"></i></a>&nbsp;<a class="email"><i
-                                class="fa-solid fa-m"></i></a></li>
-                </ul>
-            </div>
-            <div class="footer__data">
-                <ul>
-                    <img src="#"><img src="#"><img src="#"><img src="#">
-                </ul>
-            </div>
+    <footer class="footer">
+        <div class="info">
+          <h4>Informazioni</h4>
+          <p>Indirizzo: Via Esempio 123, 00100 Roma</p>
+          <p>Email: info@example.com</p>
+          <p>Telefono: +39 012 345 6789</p>
         </div>
-        <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights
-            reserved.</p>
-    </footer>
-
-    <script src="js/progetti.js"></script>
+        <div class="partners">
+          <h4>Partner</h4>
+          <img src="logo1.png" alt="Partner 1">
+          <img src="logo2.png" alt="Partner 2">
+          <img src="logo3.png" alt="Partner 3">
+          <img src="logo4.png" alt="Partner 4">
+          <img src="logo5.png" alt="Partner 5">
+          <img src="logo6.png" alt="Partner 6">
+        </div>
+        <div class="copyright">
+          &#169; 2024 4INC ITT TRENTO. All rights reserved
+        </div>
+      </footer>
+    <script src="js/sezioneProgetto.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

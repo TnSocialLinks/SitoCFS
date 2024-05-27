@@ -30,3 +30,6 @@ function showSlide() {
 
 // Avviamo il carosello
 showSlide();
+
+  
+  
