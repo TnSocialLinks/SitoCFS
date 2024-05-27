@@ -13,6 +13,8 @@
   --text-color-light: #A6A6A6;
   --body-color: #FBFEFD;
   --container-color: #FFFFFF;
+  --navbar-color: #1A405A;
+  --navbar-link-color: #FFFFFF;
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -41,8 +43,8 @@
   --z-fixed: 100;
 }
 
-@media screen and (min-width: 768px){
-  :root{
+@media screen and (min-width: 768px) {
+  :root {
     --biggest-font-size: 4rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -53,7 +55,9 @@
   }
 }
 
-*,::before,::after{
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -75,21 +79,25 @@ body {
 
 .carousel {
   width: 100%;
+  height: calc(100vh - 72px); /* Altezza fissa per il carosello su schermi grandi */
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 72px;
 }
 
 .carousel-inner {
   width: 100%;
+  height: 100%;
   display: flex;
   transition: transform 0.5s ease;
 }
 
 .carousel-item {
   flex: 0 0 100%;
+  height: 100%; /* Altezza fissa per gli elementi del carosello */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,8 +105,8 @@ body {
 
 .carousel-item img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover; /* Le immagini riempiono il contenitore mantenendo le proporzioni */
 }
 
 .carousel-indicators {
@@ -134,15 +142,21 @@ body {
 
 @media (max-width: 768px) {
   .carousel {
-    height: auto;
+    height: calc(80vh - 48px); /* Altezza fissa per il carosello su schermi più piccoli */
+    margin-top: 48px;
   }
 
   .carousel-inner {
-    height: auto;
+    height: 100%;
   }
 
   .carousel-item {
-    height: auto;
+    height: 100%;
+  }
+
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Le immagini riempiono il contenitore mantenendo le proporzioni */
   }
 
   .carousel-indicators {
@@ -163,6 +177,15 @@ body {
     font-size: 24px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .carousel {
+    height: calc(50vh - 48px); /* Altezza fissa per il carosello su schermi più piccoli */
+    margin-top: 48px;
+  }
+}
+
+
 
 .container {
   max-width: 1024px;
@@ -188,7 +211,8 @@ body {
   width: 320px;
   height: 250px;
   background-color: #ccc;
-  overflow: hidden; /* Ensure overlay text does not overflow */
+  overflow: hidden;
+  /* Ensure overlay text does not overflow */
 }
 
 .offer img {
@@ -218,16 +242,21 @@ body {
   font-size: 20px;
   cursor: pointer;
   display: inline-block;
-  background-color: var(--first-color); /* Colore di sfondo predefinito */
-  color: #FFF; /* Colore del testo predefinito */
+  background-color: var(--first-color);
+  /* Colore di sfondo predefinito */
+  color: #FFF;
+  /* Colore del testo predefinito */
   border-radius: .5rem;
   transition: .3s;
-  border: 2px solid var(--first-color); /* Bordo al passaggio del mouse */
+  border: 2px solid var(--first-color);
+  /* Bordo al passaggio del mouse */
 }
 
 .button:hover {
-  background-color: white; /* Colore di sfondo al passaggio del mouse */
-  color: var(--first-color); /* Colore del testo al passaggio del mouse */
+  background-color: white;
+  /* Colore di sfondo al passaggio del mouse */
+  color: var(--first-color);
+  /* Colore del testo al passaggio del mouse */
 }
 
 
@@ -312,16 +341,17 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA BARRA DI NAVIGAZIONE SOPRA
 
 */
 
-.l-header{
+.l-header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--navbar-color);
+
 }
 
-.nav{
+.nav {
   max-width: 1024px;
   height: var(--header-height);
   display: flex;
@@ -330,58 +360,52 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA BARRA DI NAVIGAZIONE SOPRA
 }
 
 
-@media screen and (max-width: 768px){
-  .nav__menu{
+@media screen and (max-width: 768px) {
+  .nav__menu {
     position: fixed;
     top: -100%;
     left: 0;
     width: 100%;
-    padding: 1.5rem 0 1rem;
+    padding: 1.5rem 1rem 1rem;
     text-align: center;
-    background-color: var(--body-color);
+    background-color: var(--navbar-color);
     transition: .4s;
-    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
     border-radius: 0 0 1rem 1rem;
     z-index: var(--z-fixed);
   }
 }
 
-.bd-container{
+.bd-container {
   max-width: 1024px;
   width: calc(100% - 2rem);
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
 
-.nav__item{
+.nav__item {
   margin-bottom: var(--mb-2);
 }
 
-.nav__link, .nav__logo, .nav__toggle{
-  color: var(--text-color);
+.nav__link,
+.nav__logo,
+.nav__toggle {
+  color: var(--navbar-link-color);
   font-weight: var(--font-medium);
 }
 
-.nav__logo:hover{
-  color: var(--first-color);
-}
-
-.nav__link{
+.nav__link {
   transition: .3s;
 }
 
-.nav__link:hover{
-  color: var(--first-color);
-}
-
-.nav__toggle{
+.nav__toggle {
   font-size: 1.3rem;
   cursor: pointer;
 }
 
 /* Active menu */
-.active-link{
-  color: var(--first-color);
+.active-link {
+  font-weight: bold;
 }
 
 ul {
@@ -391,12 +415,12 @@ ul {
   text-align: justify;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 /* Show menu */
-.show-menu{
+.show-menu {
   top: var(--header-height);
 }
 
@@ -405,7 +429,7 @@ a{
 DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I PROGETTI
 
 */
-.main-progetti{
+.main-progetti {
   padding-bottom: var(--mb-6);
 }
 
@@ -454,7 +478,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
   margin: 0;
 }
 
-.progetto-pulsante{
+.progetto-pulsante {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -507,24 +531,27 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LE QUERY CHE SERVO PER GESTIRE I D
   .progetto-layoutUno {
     grid-template-columns: 4fr 6fr;
   }
-  
+
   .progetto-layoutDue {
     grid-template-columns: 6fr 4fr;
   }
 }
 
-@media screen and (min-width: 768px){
-  .nav{
+@media screen and (min-width: 768px) {
+  .nav {
     height: calc(var(--header-height) + 1.5rem);
   }
-  .nav__list{
+
+  .nav__list {
     display: flex;
   }
-  .nav__item{
+
+  .nav__item {
     margin-left: var(--mb-5);
     margin-bottom: 0;
   }
-  .nav__toggle{
+
+  .nav__toggle {
     display: none;
   }
 }
@@ -534,7 +561,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LE QUERY CHE SERVO PER GESTIRE I D
     margin-left: auto;
     margin-right: auto;
   }
-  
+
 }
 
 @media (max-width: 1024px) {
