@@ -9,6 +9,9 @@
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style/home.css">
   <script src="https://kit.fontawesome.com/dba2d940e6.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
 
 <body>
@@ -21,7 +24,7 @@
       <a class="nav__logo"></a>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item  active-link"><a href="#home" class="nav__link">HOME</a></li>
+          <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
           <li class="nav__item"><a href="#offerte" class="nav__link">OFFERTE</a></li>
           <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE
               SCOLASTICHE</a></li>
@@ -122,14 +125,37 @@
       &#169; 2024 4INC ITT TRENTO. All rights reserved
     </div>
   </footer>
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/ultimeOfferte.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/carosello.js"></script>
-
     <script>
+$('a[href^="#"]').on('click', function(event) {
+    var targetId = this.getAttribute('href');
+    var target = $(targetId);
+    if (target.length && targetId !== '#') {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100 // 100 is the additional offset
+        }, 1000);
+    }
+});
+
+$(window).on('scroll', function() {
+    var scrollPos = $(document).scrollTop() + 200; // 200 is the additional offset
+    $('.nav__list a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr('href'));
+        if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.nav__list a').removeClass('active-link');
+            currLink.addClass('active-link');
+        }
+    });
+});
+
+
+
 
     </script>
+    
 </body>
 
 </html>

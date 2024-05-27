@@ -468,6 +468,13 @@ a {
   top: var(--header-height);
 }
 
+/* Show scrolltop */
+.show-scroll{
+  visibility: visible;
+  bottom: 1.5rem;
+}
+
+
 /* 
 
 DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I PROGETTI
