@@ -24,24 +24,26 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
 function scrollActive(){
     const scrollY = window.scrollY;
+    const navbarHeight = document.getElementById('header').offsetHeight; // Ottieni l'altezza della navbar
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 72;
+        const sectionTop = current.offsetTop - ((current.getAttribute('id') === 'chiSiamo') ? 0 : navbarHeight); // Sottrai l'altezza della navbar
         sectionId = current.getAttribute('id')
 
+        let navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']'); // Ottieni il link corrispondente
+
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            if(navLink) navLink.classList.add('active-link'); // Aggiungi la classe solo se il link esiste
         }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            if(navLink) navLink.classList.remove('active-link'); // Rimuovi la classe solo se il link esiste
         }
     })
 }
 window.addEventListener('scroll', scrollActive)
+
 
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
