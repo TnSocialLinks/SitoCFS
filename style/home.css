@@ -541,6 +541,86 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
   display: flex;
   justify-content: center;
 }
+.chiSiamo-container {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  margin: 0;
+  position: relative; /* Assicura che gli elementi interni possano essere posizionati in relazione al contenitore */
+}
+
+.chiSiamo-container img {
+  margin-top: 72px;
+  width: 100%;
+  height: calc(100vh - 72px);
+  display: block;
+  object-fit: cover; /* Assicura che l'immagine copra l'intero contenitore */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.chiSiamo-textOverlay {
+  color: rgb(0, 0, 0);
+  font-size: var(--biggest-font-size);
+  font-weight: bold;
+}
+
+.chiSiamo-buttonOverlay {
+  font-size: var(--biggest-font-size);
+  font-weight: bold;
+}
+
+
+.instagram {
+  font-size: xx-large;
+  color: #708090;
+}
+
+.instagram:hover {
+  background: #f09433;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.email {
+  font-size: xx-large;
+  color: #708090;
+}
+
+.email:hover {
+  background: white;
+  background: linear-gradient(45deg, #ff0000 0%, #ff0000 25%, #ff8f8f 65%, white 75%, white 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+@media (max-width: 768px) {
+  .overlay {
+    flex-direction: column;
+    top: 40%;
+    transform: translateY(-40%);
+  }
+
+  .chiSiamo-buttonOverlay {
+    margin-top: 20px;
+  }
+}
 
 
 /* 
