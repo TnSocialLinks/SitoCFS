@@ -87,8 +87,6 @@
     </div>
   </div>
 
-
-  <!-- IMAGINE OFFERTE  Da sistemare il container imagine offerte e l'overlay per mettere testo chi siamo e sistemare il pulsante -->
   <div class="chiSiamo-container" id="chiSiamo"> 
     <img src="img/home_ChiSiamo.jpg">
     <div class="overlay">
@@ -100,14 +98,6 @@
     </div>
   </div>
   
-
-
-
-
-
-
-
-
   <footer class="footer">
     <div class="info">
       <h1>INFO</h1>
@@ -132,10 +122,26 @@
       &#169; 2024 4INC ITT TRENTO. All rights reserved
     </div>
   </footer>
-
+  <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/ultimeOfferte.js"></script>
     <script src="js/main.js"></script>
     <script src="js/carosello.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('.nav__link');
+  
+        navItems.forEach(item => {
+          item.addEventListener('click', function() {
+            // Rimuovi la classe active-link da tutti i nav__item
+            navItems.forEach(i => i.classList.remove('active-link'));
+  
+            // Aggiungi la classe active-link all'elemento cliccato
+            this.classList.add('active-link');
+          });
+        });
+      });
+    </script>
 </body>
 
 </html>
