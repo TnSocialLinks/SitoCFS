@@ -1,6 +1,6 @@
 :root {
     /*========== Nostre Variabili =============*/
-    --section-height: 600px; /* Altezza specifica per la sezione */
+    --section-height: 400px; /* Altezza specifica per la sezione */
     --image-width: 80%;
     --image-height: 60%;
     --image-border-size: 20px;
@@ -53,15 +53,19 @@
 
 .right .info button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #1A405A;
     color: white;
-    border: none;
+    border: 3px solid #1A405A;
     border-radius: 5px;
     cursor: pointer;
+    font-size: large;
+    font-weight: bold;
 }
 
 .right .info button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color:#1A405A;
+    border: 3px solid #1A405A;
 }
 
 .image-container {
@@ -82,10 +86,13 @@
 .details {
     padding: 20px;
     background-color: #fff;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .details h2 {
     margin-top: 0;
+    color: #1A405A;
 }
 
 .details p {
@@ -98,6 +105,7 @@
     align-items: flex-start;
     position: relative;
     gap: 20px; /* Aggiunge spazio tra i due box e la linea */
+    font-family: 'Panton Narrow-Trial';
 }
 
 .requirements .min-requirements,
@@ -108,10 +116,11 @@
 
 .requirements h3 {
     margin-top: 0;
+    color: #1A405A;
 }
 
 .vertical-divider {
-    width: 4%;
+    width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,11 +139,13 @@
     border: none;
     border-top: 10px solid #1a4050;
     margin-top: 20px;
+    width: 45%;
+    position: absolute;
 }
 
 .requirements .vertical-divider {
-    width: 1px; /* Larghezza della linea */
-    background-color: #ccc; /* Colore della linea */
+    width: 5px; /* Larghezza della linea */
+    background-color: #1A405A; /* Colore della linea */
     height: auto; /* Imposta l'altezza automatica */
     align-self: stretch; /* Allunga la linea per tutta l'altezza dei box */
     margin: 0 20px; /* Spaziatura tra i box e la linea */
@@ -145,11 +156,14 @@
     padding: 20px;
     background-color: #fff;
     margin-top: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .contacts h2,
 .gallery h2 {
     margin-top: 0;
+    color: #1A405A;
 }
 
 .contact-info {
@@ -171,4 +185,6 @@
     border-radius: 10px;
     overflow: hidden;
 }
+
+
 
