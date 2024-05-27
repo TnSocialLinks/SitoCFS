@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 2</title>
+</head>
+<body>
+    <div id="message"></div>
+
+    <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split('&');
+            for (let pair of pairs) {
+                const [key, value] = pair.split('=');
+                params[key] = decodeURIComponent(value);
+            }
+            return params;
+        }
+
+        const queryParams = getQueryParams();
+        const message = queryParams.message;
+
+        document.getElementById('message').textContent = message;
+    </script>
+</body>
+</html>
+

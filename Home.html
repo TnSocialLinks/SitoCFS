@@ -1,98 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Carousel</title>
-    <link rel="stylesheet" href="style/home.css">
+  <link rel="icon" type="image/x-icon" href="img/Logo__TNSocialLink__NoBG.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TnSocialLinks</title>
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style/home.css">
 </head>
 
 <body>
 
-   
-<header class="l-header" id="header">
-  <nav class="nav bd-container">
-    <a href="https://www.cooperazionetrentina.it/it" target="_blank">
-      <img src="img/Logo_Cooperazione_Bandiera.svg">
-    </a>
-    <a class="nav__logo"></a>
-    <div class="nav__menu" id="nav-menu">
-      <ul class="nav__list">
-        <li class="nav__item  active-link"><a href="#home"
-            class="nav__link">HOME</a></li>
-        <li class="nav__item"><a href="#offerte"
-            class="nav__link">OFFERTE</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE
-            SCOLASTICHE</a></li>
-        <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
-        <li class="nav__item"><a href="#about-us"
-            class="nav__link">CHI SIAMO</a></li>
-      </ul>
-    </div>
-    <div class="nav__toggle" id="nav-toggle">
-      <i class='bx bx-menu'></i>
-    </div>
-  </nav>
-</header>
-
-
-
-
-
-
-
-  <div class="container">
-    <div class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/1.jpg" alt="Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="img/2.jpg" alt="Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="img/ciao.jpg" alt="Image 3">
-            </div>
-        </div>
-        <div class="carousel-indicators">
-            <span class="indicator active"></span>
-            <span class="indicator"></span>
-            <span class="indicator"></span>
-        </div>
-        <div class="down-arrow">&#x25BC;</div>
-    </div>
-
-
-    <section class="offerte-section">
-      <h2>Offerte</h2>
-      <div class="offerte-container">
-          <div class="offerta-item">
-              <img src="img/1.jpg" alt="Offer 1">
-              <div class="overlay">
-                  <p>Testo dell'offerta 1</p>
-              </div>
-          </div>
-          <div class="offerta-item">
-              <img src="img/2.jpg" alt="Offer 2">
-              <div class="overlay">
-                  <p>Testo dell'offerta 2</p>
-              </div>
-          </div>
-          <div class="offerta-item">
-              <img src="img/3.jpg" alt="Offer 3">
-              <div class="overlay">
-                  <p>Testo dell'offerta 3</p>
-              </div>
-          </div>
+  <header class="l-header" id="header">
+    <nav class="nav bd-container">
+      <a href="https://www.cooperazionetrentina.it/it" target="_blank">
+        <img src="img/Logo_Cooperazione_Bandiera.svg">
+      </a>
+      <a class="nav__logo"></a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item  active-link"><a href="#home" class="nav__link">HOME</a></li>
+          <li class="nav__item"><a href="#offerte" class="nav__link">OFFERTE</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">COOPERATIVE
+              SCOLASTICHE</a></li>
+          <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
+          <li class="nav__item"><a href="#chiSiamo" class="nav__link">CHI SIAMO</a></li>
+        </ul>
       </div>
-      <button class="offerte-button">Scopri di più</button>
-  </section>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+    </nav>
+  </header>
+
+  <div class="carousel" id="home">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://github.com/TnSocialLinks/SitoCFS/blob/master/img/1.jpg?raw=true" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/2.jpg" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/ciao.jpg" alt="Image 3">
+      </div>
+    </div>
+    <div class="carousel-indicators">
+      <span class="indicator active"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+    </div>
+    <div class="down-arrow">&#x25BC;</div>
+  </div>
+
+  <div class="container" id="offerte">
+    <h2 class="section-title">Offerte</h2>
+    <div class="offers">
+      <div class="offer">
+        <img alt="Offer 1" id="img1">
+        <div class="offer-overlay" id="offerta1">Testo Offerta 1</div>
+      </div>
+      <div class="offer">
+        <img alt="Offer 2" id="img2">
+        <div class="offer-overlay" id="offerta2">Testo Offerta 2</div>
+      </div>
+      <div class="offer">
+        <img alt="Offer 3" id="img3">
+        <div class="offer-overlay" id="offerta3">Testo Offerta 3</div>
+      </div>
+    </div>
+    <div class="offer-button">
+      <a href="Progetti.html"><button class="button">Scopri di più</button></a>
+    </div>
+  </div>
+
+  <div class="container" id="richiediProgetto">
+    <div class="richiedi">
+      <img src="img/ciao.jpg" alt="New Section Image">
+      <div class="text-content">
+        <h3>Titolo della nuova sezione</h3>
+        <p>Sottotitolo della nuova sezione</p>
+        <button class="button">Scopri di più</button>
+      </div>
+    </div>
+  </div>
 
 
-
-
-
-
+  <!-- IMAGINE OFFERTE  Da sistemare il container imagine offerte e l'overlay per mettere testo chi siamo e sistemare il pulsante -->
+  <div class="imagineOfferte-container" id="chiSiamo"> 
+    <img src="img/MontagneBelle.jpg">
+    <div class="imagineOfferte-textOverlay">OFFERTE</div>
+    <div class="imagineOfferte-textOverlay"><button class="button">Scopri di più</button></div>
   </div>
 
 
@@ -101,48 +100,31 @@
 
 
 
-    <footer class="footer section bd-container">
-        <div class="footer__container bd-grid">
-          <div class="footer__data">
-            <span class="footer__title">INFO</span>
-            <br>
-            <br>
-            <br>
-            <ul>
-              <li>Via Brigata Acqui 15 - 38122 Trento</li>
-              <li>E-mail: tnsocialinks@gmail.com</li>
-              <li>&nbsp;</li>
-              <li>
-                <a
-                  href="https://www.instagram.com/trentinosociallinks?igsh=Y3A5dGFwMXp3dThn"
-                  class="instagram" target="_blank">
-                  <i class="fa-brands fa-square-instagram"></i>
-                </a>
-                &nbsp;
-                <a class="email"><i class="fa-solid fa-m"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__data">
-            <span class="footer__title">PARTNER</span>
-            <br>
-            <br>
-            <br>
-  
-            <ul>
-              <img src="#" alt="Artigianelli">
-              <img src="#">
-              <img src="#">
-              <img src="#">
-            </ul>
-          </div>
-        </div>
-        <p class="footer__copy">&#169; 2024 4INC ITT TRENTO. All rights
-          reserved</p>
-      </footer>
+
+  <footer class="footer">
+    <div class="info">
+      <h4>Informazioni</h4>
+      <p>Indirizzo: Via Esempio 123, 00100 Roma</p>
+      <p>Email: info@example.com</p>
+      <p>Telefono: +39 012 345 6789</p>
+    </div>
+    <div class="partners">
+      <h4>Partner</h4>
+      <img src="logo1.png" alt="Partner 1">
+      <img src="logo2.png" alt="Partner 2">
+      <img src="logo3.png" alt="Partner 3">
+      <img src="logo4.png" alt="Partner 4">
+      <img src="logo5.png" alt="Partner 5">
+      <img src="logo6.png" alt="Partner 6">
+    </div>
+    <div class="copyright">
+      &#169; 2024 4INC ITT TRENTO. All rights reserved
+    </div>
+  </footer>
 
     <script src="js/prova.js"></script>
     <script src="js/main.js"></script>
     <script src="prova.js"></script>
 </body>
+
 </html>
