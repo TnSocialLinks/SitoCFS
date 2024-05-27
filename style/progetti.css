@@ -67,11 +67,26 @@
 .filtro {
     padding-top: var(--mb-6);
     padding-bottom: var(--mb-6);
+    font-size: var(--h1-font-size);
+    font-weight: bolder;
+    color: #1A405A;
 }
 
 .filtro-icon {
     font-size: 2rem;
     cursor: pointer;
+}
+
+.filtro-linea {
+    height: 20px;
+    margin: 0;
+    width: 60%;
+    color: #1A405A;
+    background-color: #1A405A;
+}
+
+.filtro-container {
+    margin-top: 20px;
 }
 
 .progetto-container {

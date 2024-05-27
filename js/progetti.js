@@ -17,7 +17,6 @@ const showFiltro = (filtroId) => {
     const filtro = document.getElementById(filtroId)
     if(filtro){
         filtro.addEventListener('click', () =>{
-            console.log("ciao")
         })
     }
 }
