@@ -605,9 +605,16 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
 }
 
 .chiSiamo-textOverlay {
-  color: rgb(0, 0, 0);
+  color: white;
+  font-weight: normal;
+}
+
+.chiSiamo-textOverlay-Title {
   font-size: var(--biggest-font-size);
-  font-weight: bold;
+}
+
+.chiSiamo-textOverlay-Paragraph {
+  
 }
 
 .chiSiamo-buttonOverlay {
