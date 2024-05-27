@@ -320,6 +320,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE IL FOOTER
   margin-right: 20px;
 }
 
+
 .footer .partners img {
   max-width: 100px;
   max-height: 100px;
@@ -342,6 +343,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE IL FOOTER
   color: white;
   font-size: large;
 }
+
 
 /* 
 
@@ -512,7 +514,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
 .imagineOfferte-container img {
   margin-top: 72px;
   width: 100%;
-  height: calc(80vh - 72px);
+  height: calc(100v h);
   display: block;
   grid-area: 1 / 1 / 2 / 2;
 }
