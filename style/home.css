@@ -527,6 +527,11 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
   font-weight: bold;
 }
 
+.carica {
+  display: flex;
+  justify-content: center;
+}
+
 
 /* 
 
