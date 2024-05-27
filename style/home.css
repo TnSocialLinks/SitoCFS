@@ -746,4 +746,11 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LE QUERY CHE SERVO PER GESTIRE I D
   .footer .partners {
     text-align: center;
   }
+
+  .info {
+    padding-left: 0px;
+  }
+  .partners {
+    padding-right: 0px;
+  }
 }
