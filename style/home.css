@@ -613,10 +613,6 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
   font-size: var(--biggest-font-size);
 }
 
-.chiSiamo-textOverlay-Paragraph {
-  
-}
-
 .chiSiamo-buttonOverlay {
   font-size: var(--biggest-font-size);
   font-weight: bold;
