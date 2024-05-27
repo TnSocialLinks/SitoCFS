@@ -306,7 +306,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE IL FOOTER
   width: 100%;
   box-sizing: border-box;
   padding: 20px;
-  background-color: #333;
+  background-color: #1A405A;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -331,8 +331,16 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE IL FOOTER
   margin-top: 20px;
 }
 
-.footer h4 {
-  margin-bottom: 10px;
+.footer h1 {
+  margin-bottom: 30px;
+  font-size: 2.25rem;
+  color: white;
+  font-weight: lighter;
+}
+
+.footer p {
+  color: white;
+  font-size: large;
 }
 
 /* 
