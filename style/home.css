@@ -79,7 +79,7 @@ body {
 
 .carousel {
   width: 100%;
-  height: calc(100vh - 72px); /* Altezza fissa per il carosello su schermi grandi */
+  height: calc(80vh - 72px); /* Altezza fissa per il carosello su schermi grandi */
   overflow: hidden;
   position: relative;
   display: flex;
@@ -504,9 +504,16 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
 .imagineOfferte-container img {
   margin-top: 72px;
   width: 100%;
-  height: calc(100vh - 72px);
+  height: calc(80vh - 72px);
   display: block;
   grid-area: 1 / 1 / 2 / 2;
+}
+
+@media screen and (max-width: 768px) {
+  .imagineOfferte-container img {
+    margin-top: 48px;
+    height: calc(60vh - 48px);
+  }
 }
 
 .imagineOfferte-textOverlay {
