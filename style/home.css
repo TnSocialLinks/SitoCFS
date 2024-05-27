@@ -351,32 +351,6 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE IL FOOTER
   font-size: large;
 }
 
-.instagram {
-  font-size: xx-large;
-  color: #708090;
-}
-
-.instagram:hover {
-  background: #f09433;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.email {
-  font-size: xx-large;
-  color: #708090;
-}
-
-.email:hover {
-  background: white;
-  background: linear-gradient(45deg, #ff0000 0%, #ff0000 25%, #ff8f8f 65%, white 75%, white 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* 
 
 DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA BARRA DI NAVIGAZIONE SOPRA
@@ -546,7 +520,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
 .imagineOfferte-container img {
   margin-top: 72px;
   width: 100%;
-  height: calc(80vh - 72px);
+  height: calc(100v h);
   display: block;
   grid-area: 1 / 1 / 2 / 2;
 }
