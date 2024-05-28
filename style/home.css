@@ -767,3 +767,25 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LE QUERY CHE SERVO PER GESTIRE I D
     padding-right: 0px;
   }
 }
+
+
+
+/*###################CSS chiSiamo####################*/
+
+.about-us {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  margin: 0;
+  position: relative; /* Assicura che gli elementi interni possano essere posizionati in relazione al contenitore */
+}
+
+.about-us img {
+  margin-top: 72px;
+  width: 100%;
+  height: calc(100vh - 72px);
+  display: block;
+  object-fit: cover; /* Assicura che l'immagine copra l'intero contenitore */
+  filter: brightness(70%)
+}
