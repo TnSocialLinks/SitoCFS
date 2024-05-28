@@ -13,7 +13,7 @@ let currentIndex = 0;
 const projectsPerPage = 4;
 
 async function fetchProjects(project) {
-    const response = await fetch(`https://backendcfs.vercel.app/api/projects?project=${project}`);
+    const response = await fetch(`https://backendcfs.vercel.app/api/project?project=${project}`);
     if (response.ok) {
         return await response.json();
     } else {
@@ -22,8 +22,8 @@ async function fetchProjects(project) {
     }
 }
 
-function createSection(message) {
-
+function createSection(project) {
+    
 
      
     
