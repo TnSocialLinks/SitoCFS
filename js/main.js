@@ -23,61 +23,25 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-function scrollActive(){
-    const scrollY = window.scrollY;
-    const navbarHeight = document.getElementById('header').offsetHeight; // Ottieni l'altezza della navbar
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - ((current.getAttribute('id') === 'chiSiamo') ? 0 : navbarHeight); // Sottrai l'altezza della navbar
-        sectionId = current.getAttribute('id')
-
-        let navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']'); // Ottieni il link corrispondente
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            if(navLink) navLink.classList.add('active-link'); // Aggiungi la classe solo se il link esiste
-        }else{
-            if(navLink) navLink.classList.remove('active-link'); // Rimuovi la classe solo se il link esiste
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-
-
-/*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '30px',
-    duration: 2000,
-    reset: true
+$('a[href^="#"]').on('click', function(event) {
+    var targetId = this.getAttribute('href');
+    var target = $(targetId);
+    if (target.length && targetId !== '#') {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100 // 100 is the additional offset
+        }, 1000);
+    }
 });
 
-sr.reveal('.chiSiamo-container', {
-    interval: 200
-})
+$(window).on('scroll', function() {
+    var scrollPos = $(document).scrollTop() + 200; // 200 is the additional offset
+    $('.nav__list a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr('href'));
+        if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.nav__list a').removeClass('active-link');
+            currLink.addClass('active-link');
+        }
+    });
+});
