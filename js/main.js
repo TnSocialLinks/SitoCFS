@@ -23,37 +23,25 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive(){
-    const scrollY = window.scrollY
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-/*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '30px',
-    duration: 3000,
-    reset: true
+$('a[href^="#"]').on('click', function(event) {
+    var targetId = this.getAttribute('href');
+    var target = $(targetId);
+    if (target.length && targetId !== '#') {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100 // 100 is the additional offset
+        }, 1000);
+    }
 });
 
-sr.reveal('.carousel, .container, .imagineOfferte-container', {
-    interval: 200
-})
-
-
+$(window).on('scroll', function() {
+    var scrollPos = $(document).scrollTop() + 200; // 200 is the additional offset
+    $('.nav__list a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr('href'));
+        if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.nav__list a').removeClass('active-link');
+            currLink.addClass('active-link');
+        }
+    });
+});
