@@ -589,6 +589,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
   height: calc(100vh - 72px);
   display: block;
   object-fit: cover; /* Assicura che l'immagine copra l'intero contenitore */
+  filter: brightness(70%)
 }
 
 .overlay {
@@ -611,6 +612,10 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA PAGINA DOVE SI VEDONO TUTTI I P
 
 .chiSiamo-textOverlay-Title {
   font-size: var(--biggest-font-size);
+}
+
+.chiSiamo-textOverlay p {
+  align-content: left;
 }
 
 .chiSiamo-buttonOverlay {
