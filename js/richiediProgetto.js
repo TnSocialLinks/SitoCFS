@@ -23,10 +23,10 @@ async function fetchProjects(project) {
 }
 
 function createSection(message) {
-    
+
 
      
-    }
+    
 }
 
 async function loadProjects() {  
