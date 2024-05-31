@@ -26,7 +26,7 @@
         <ul class="nav__list">
           <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
           <li class="nav__item"><a href="#offerte" class="nav__link">OFFERTE</a></li>
-          <li class="nav__item"><a href="cooperativeScolastiche" class="nav__link">COOPERATIVE
+          <li class="nav__item"><a href="cooperativeScolastiche.html" class="nav__link">COOPERATIVE
               SCOLASTICHE</a></li>
           <li class="nav__item"><a href="#richiediProgetto" class="nav__link">RICHIEDI PROGETTO</a></li>
           <li class="nav__item"><a href="#chiSiamo" class="nav__link">CHI SIAMO</a></li>
@@ -95,7 +95,7 @@
     <div class="overlay">
       <div class="chiSiamo-textOverlay">
         <div class="chiSiamo-textOverlay-Title">CHI SIAMO</div>
-        <p class="chiSiamo-textOverlay-Paragraph">Siamo la classe 4a INC (composta da 19 alunni) dell’istituto tecnico tecnologico M.Buonarroti di Trento, anno scolastico 2023/24.</p>
+        <p>Siamo la classe 4a INC (composta da 19 alunni) dell’istituto tecnico tecnologico M.Buonarroti di Trento, anno scolastico 2023/24.</p>
       </div>
       <div class="chiSiamo-buttonOverlay"><button class="button">Scopri di più</button></div>
     </div>
@@ -134,13 +134,13 @@ $('a[href^="#"]').on('click', function(event) {
     if (target.length && targetId !== '#') {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top - ((targetId === '#chiSiamo') ? 0:72) // 100 is the additional offset
+            scrollTop: target.offset().top - 100 // 100 is the additional offset
         }, 1000);
     }
 });
 
 $(window).on('scroll', function() {
-    var scrollPos = $(document).scrollTop() + 100; // 200 is the additional offset
+    var scrollPos = $(document).scrollTop() + 200; // 200 is the additional offset
     $('.nav__list a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr('href'));
