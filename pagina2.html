@@ -10,42 +10,6 @@
   <button id="moveButton">Sposta Cartella</button>
 
   <script>
-        async function moveFolder(owner, repo, fromPath, toPath) {
-      const response = await fetch('https://backendcfs.vercel.app/api/move-folder', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          owner: owner,
-          repo: repo,
-          fromPath: fromPath,
-          toPath: toPath
-        })
-      });
-
-      if (response.ok) {
-        return await response.json();
-      } else {
-        console.error('Errore nel recupero dei progetti:', response.statusText);
-        return [];
-      }
-    }
-
-    document.getElementById('moveButton').addEventListener('click', function() {
-      const owner = "TnSocialLinks";
-      const repo = "backend";
-      const fromPath = "progetti";
-      const toPath = "archivio-progetti";
-      
-      moveFolder(owner, repo, fromPath, toPath)
-        .then(result => {
-          console.log('Folder moved successfully:', result);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    });
   </script>
 </body>
 </html>
