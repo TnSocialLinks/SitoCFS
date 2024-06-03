@@ -6,22 +6,14 @@
     <title>Messaggio</title>
 </head>
 <body>
-    <div id="message"></div>
+    <div id="titolo"></div>
+    <div id="ente"></div>
+    <div id="tag"></div>
+    <div id="numMinimo"></div>
+    <div id="scadenza"></div>
+    <div id="descrizione"></div>
+    <div id="titolo"></div>
+    <div id="titolo"></div>
 
-    <script>
-        // Funzione per ottenere il parametro di query dalla URL
-        function getQueryParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        // Ottieni il messaggio dalla URL e mostrala
-        const message = getQueryParameter('message');
-        if (message) {
-            document.getElementById('message').textContent = message;
-        } else {
-            document.getElementById('message').textContent = 'Nessun messaggio da visualizzare.';
-        }
-    </script>
 </body>
 </html>
