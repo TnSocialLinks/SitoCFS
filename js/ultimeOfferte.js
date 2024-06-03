@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // URL del tuo endpoint backend
     const url = 'https://backendcfs.vercel.app/api/ultime-offerte';
 
@@ -24,8 +24,34 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('img3').src = folders[2].imageUrl;
                 offerta3.textContent = folders[2].name;
             }
+
+            const linkMessages = {
+                link1: folders[0].name,
+                link2: folders[1].name,
+                link3: folders[2].name
+            };
+
+
+            // Funzione per gestire il click
+            function handleClick(event) {
+                event.preventDefault(); // Previene il comportamento predefinito del link
+                const linkId = event.target.id;
+                const message = linkMessages[linkId];
+                if (message) {
+                    // Apri una nuova finestra con il messaggio come query parameter
+                    window.open(`pagina2.html?message=${encodeURIComponent(message)}`, '_blank');
+                } else {
+                    console.error('Nessun messaggio trovato per il link:', linkId);
+                }
+            }
+
+            // Assegna la funzione di click a ciascun link
+            document.getElementById('progetto1').addEventListener('click', handleClick);
+            document.getElementById('progetto2').addEventListener('click', handleClick);
+            document.getElementById('progetto3').addEventListener('click', handleClick);
         })
         .catch(error => {
             console.error('Errore nella richiesta:', error);
         });
 });
+

@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sposta Cartella</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaggio</title>
 </head>
 <body>
-  <h1>Sposta Cartella su GitHub</h1>
-  <button id="moveButton">Sposta Cartella</button>
+    <div id="message"></div>
 
-  <script>
-    document.getElementById('moveButton').addEventListener('click', function() {
-      const data = {
-        owner: "TnSocialLinks",
-        repo: "backend",
-        fromPath: "progetti/",
-        toPath: "archivio-progetti/"
-      };
+    <script>
+        // Funzione per ottenere il parametro di query dalla URL
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
 
-      fetch('https://backendcfs.vercel.app/pages/api/moveFolder', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error('Error:', error));
-    });
-  </script>
+        // Ottieni il messaggio dalla URL e mostrala
+        const message = getQueryParameter('message');
+        if (message) {
+            document.getElementById('message').textContent = message;
+        } else {
+            document.getElementById('message').textContent = 'Nessun messaggio da visualizzare.';
+        }
+    </script>
 </body>
 </html>
