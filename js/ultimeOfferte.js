@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Funzione per gestire il click
     function handleClick(event) {
         event.preventDefault(); // Previene il comportamento predefinito del link
-        const linkId = event.target.id;
+        const linkId = event.target.closest('a').id;
         const message = linkMessages[linkId];
         if (message) {
             // Apri una nuova finestra con il messaggio come query parameter
