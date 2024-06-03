@@ -4,7 +4,7 @@ $('a[href^="#"]').on('click', function(event) {
     if (target.length && targetId !== '#') {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top - 100 // 100 is the additional offset
+            scrollTop: target.offset().top - ((targetId === '#chiSiamo') ? 0:100) // 100 is the additional offset
         }, 1000);
     }
 });
