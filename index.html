@@ -62,16 +62,22 @@
     <h2 class="section-title">OFFERTE</h2>
     <div class="offers">
       <div class="offer">
+        <a href="#1" id="progetto1">
         <img alt="Offer 1" id="img1">
         <div class="offer-overlay" id="offerta1">Testo Offerta 1</div>
+        </a>
       </div>
       <div class="offer">
+        <a href="#2" id="progetto2">
         <img alt="Offer 2" id="img2">
         <div class="offer-overlay" id="offerta2">Testo Offerta 2</div>
+        </a>
       </div>
       <div class="offer">
+        <a href="#3" id="progetto3">
         <img alt="Offer 3" id="img3">
         <div class="offer-overlay" id="offerta3">Testo Offerta 3</div>
+      </a>
       </div>
     </div>
     <div class="offer-button">
@@ -97,7 +103,7 @@
         <div class="chiSiamo-textOverlay-Title">CHI SIAMO</div>
         <p>Siamo la classe 4a INC (composta da 19 alunni) dell’istituto tecnico tecnologico M.Buonarroti di Trento, anno scolastico 2023/24.</p>
       </div>
-      <div class="chiSiamo-buttonOverlay"><button class="button">Scopri di più</button></div>
+      <div class="chiSiamo-buttonOverlay"><a href="chiSiamo.html"><button class="button">Scopri di più</button></a></div>
     </div>
   </div>
   
@@ -127,34 +133,8 @@
   </footer>
     <script src="js/ultimeOfferte.js"></script>
     <script src="js/carosello.js"></script>
-    <script>
-$('a[href^="#"]').on('click', function(event) {
-    var targetId = this.getAttribute('href');
-    var target = $(targetId);
-    if (target.length && targetId !== '#') {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top - 100 // 100 is the additional offset
-        }, 1000);
-    }
-});
-
-$(window).on('scroll', function() {
-    var scrollPos = $(document).scrollTop() + 200; // 200 is the additional offset
-    $('.nav__list a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr('href'));
-        if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.nav__list a').removeClass('active-link');
-            currLink.addClass('active-link');
-        }
-    });
-});
-
-
-
-
-    </script>
+    <script src="js/scroll.js"></script>
+    <script src="js/main.js"></script>
     
 </body>
 

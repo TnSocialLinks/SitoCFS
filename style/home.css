@@ -448,8 +448,7 @@ DA QUI IN POI IL CSS SERVE PER FAR FUNZIONARE LA BARRA DI NAVIGAZIONE SOPRA
 
 /* Active link styling */
 .active-link {
-  color: #FF5733; /* Change this to your desired active link color */
-  font-weight: bold; /* Example styling */
+  font-weight: 700; 
 }
 
 ul {
